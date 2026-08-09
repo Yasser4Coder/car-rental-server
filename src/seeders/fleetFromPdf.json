@@ -1,0 +1,3763 @@
+[
+  {
+    "name": "Nissan Sunny - Blanc",
+    "brand": "Nissan",
+    "model": "Sunny",
+    "year": 2023,
+    "type": "essential",
+    "price": 180,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-1/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-1/0.jpeg",
+      "/uploads/fleet/pdf-1/1.jpeg",
+      "/uploads/fleet/pdf-1/2.jpeg"
+    ],
+    "alt": "Nissan Sunny - Blanc available for rent in Dubai.",
+    "color": "Blanc",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 13,
+    "description": "Nissan Sunny - Blanc disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "180 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/106ZZTwXWs0BWZdXv23Wvsv_4jgQrPJKE",
+    "pdfId": 1
+  },
+  {
+    "name": "Nissan Kicks",
+    "brand": "Nissan",
+    "model": "Kicks",
+    "year": 2023,
+    "type": "essential",
+    "price": 240,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-2/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-2/0.jpeg",
+      "/uploads/fleet/pdf-2/1.jpeg",
+      "/uploads/fleet/pdf-2/2.jpeg"
+    ],
+    "alt": "Nissan Kicks available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 14,
+    "description": "Nissan Kicks disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "240 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1khneT5blbE2SgeyM5eUYm13EilFDidPg",
+    "pdfId": 2
+  },
+  {
+    "name": "Suzuki Swift",
+    "brand": "Suzuki",
+    "model": "Swift",
+    "year": 2023,
+    "type": "essential",
+    "price": 250,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-3/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-3/0.jpeg",
+      "/uploads/fleet/pdf-3/1.jpeg"
+    ],
+    "alt": "Suzuki Swift available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 15,
+    "description": "Suzuki Swift disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "250 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1DqBTI1ep1pGmjrFj1KLOR7izuEJSZ9_F",
+    "pdfId": 3
+  },
+  {
+    "name": "Kia Picanto",
+    "brand": "Kia",
+    "model": "Picanto",
+    "year": 2023,
+    "type": "essential",
+    "price": 250,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-4/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-4/0.jpeg",
+      "/uploads/fleet/pdf-4/1.jpeg",
+      "/uploads/fleet/pdf-4/2.jpeg"
+    ],
+    "alt": "Kia Picanto available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 16,
+    "description": "Kia Picanto disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "250 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1IfegTE0G4Cqz26NhfXddpMrytRzo8763",
+    "pdfId": 4
+  },
+  {
+    "name": "JAC J7",
+    "brand": "JAC",
+    "model": "J7",
+    "year": 2023,
+    "type": "essential",
+    "price": 250,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-5/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-5/0.jpeg",
+      "/uploads/fleet/pdf-5/1.jpeg",
+      "/uploads/fleet/pdf-5/2.jpeg",
+      "/uploads/fleet/pdf-5/3.jpeg",
+      "/uploads/fleet/pdf-5/4.jpeg",
+      "/uploads/fleet/pdf-5/5.jpeg"
+    ],
+    "alt": "JAC J7 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 17,
+    "description": "JAC J7 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "250 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1OM9CjQVUKtv0ylKvfJf97vtflUKbqZH-",
+    "pdfId": 5
+  },
+  {
+    "name": "Chevrolet Groove",
+    "brand": "Chevrolet",
+    "model": "Groove",
+    "year": 2023,
+    "type": "essential",
+    "price": 250,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-6/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-6/0.jpeg",
+      "/uploads/fleet/pdf-6/1.jpeg",
+      "/uploads/fleet/pdf-6/2.jpeg"
+    ],
+    "alt": "Chevrolet Groove available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 18,
+    "description": "Chevrolet Groove disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "250 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Mmhy66Jn7bsrHudPQbbduBdtGqOt3oCJ",
+    "pdfId": 6
+  },
+  {
+    "name": "MG3 - Gris",
+    "brand": "MG",
+    "model": "MG3",
+    "year": 2023,
+    "type": "essential",
+    "price": 250,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-7/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-7/0.jpeg",
+      "/uploads/fleet/pdf-7/1.jpeg",
+      "/uploads/fleet/pdf-7/2.jpeg",
+      "/uploads/fleet/pdf-7/3.jpeg",
+      "/uploads/fleet/pdf-7/4.jpeg"
+    ],
+    "alt": "MG3 - Gris available for rent in Dubai.",
+    "color": "Gris",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 19,
+    "description": "MG3 - Gris disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "250 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1i6lNTa-ZVIxIvgLiS-PMOxZSActll4k7",
+    "pdfId": 7
+  },
+  {
+    "name": "Geely Coolray - Gris",
+    "brand": "Geely",
+    "model": "Coolray",
+    "year": 2023,
+    "type": "essential",
+    "price": 260,
+    "deposit": 1500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-8/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-8/0.jpeg",
+      "/uploads/fleet/pdf-8/1.jpeg",
+      "/uploads/fleet/pdf-8/2.jpeg"
+    ],
+    "alt": "Geely Coolray - Gris available for rent in Dubai.",
+    "color": "Gris",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 20,
+    "description": "Geely Coolray - Gris disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "260 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1S2C3QR0qAT9K8VBFECpvVWmZ4x1oQv53",
+    "pdfId": 8
+  },
+  {
+    "name": "Renault Megane - Bleu",
+    "brand": "Renault",
+    "model": "Megane",
+    "year": 2023,
+    "type": "essential",
+    "price": 365,
+    "deposit": 1825,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-9/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-9/0.jpeg",
+      "/uploads/fleet/pdf-9/1.jpeg",
+      "/uploads/fleet/pdf-9/2.jpeg",
+      "/uploads/fleet/pdf-9/3.jpeg"
+    ],
+    "alt": "Renault Megane - Bleu available for rent in Dubai.",
+    "color": "Bleu",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 21,
+    "description": "Renault Megane - Bleu disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "365 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1TjtLrnJlUFWiKY_NXQJrPk1Ya0qYdnXf",
+    "pdfId": 9
+  },
+  {
+    "name": "Jetour X70 - 7 places",
+    "brand": "Jetour",
+    "model": "X70",
+    "year": 2023,
+    "type": "essential",
+    "price": 365,
+    "deposit": 1825,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-10/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-10/0.jpeg",
+      "/uploads/fleet/pdf-10/1.jpeg"
+    ],
+    "alt": "Jetour X70 - 7 places available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 7,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 22,
+    "description": "Jetour X70 - 7 places disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "365 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1wwBY3ZmBUuuRkCVsazSPEcazE5Y398mW",
+    "pdfId": 10
+  },
+  {
+    "name": "Audi A3 S-Line Berline - 2025",
+    "brand": "Audi",
+    "model": "A3 S-Line",
+    "year": 2025,
+    "type": "essential",
+    "price": 375,
+    "deposit": 1875,
+    "dailyKm": 250,
+    "featured": true,
+    "image": "/uploads/fleet/pdf-11/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-11/0.jpeg"
+    ],
+    "alt": "Audi A3 S-Line Berline - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 23,
+    "description": "Audi A3 S-Line Berline - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "375 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1OevOAjeOmYFJvoSclD4N9ZGs4oZVq68a",
+    "pdfId": 11
+  },
+  {
+    "name": "Peugeot 3008 Allure & GT",
+    "brand": "Peugeot",
+    "model": "3008",
+    "year": 2023,
+    "type": "essential",
+    "price": 375,
+    "deposit": 1875,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-12/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-12/0.jpeg",
+      "/uploads/fleet/pdf-12/1.jpeg"
+    ],
+    "alt": "Peugeot 3008 Allure & GT available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 24,
+    "description": "Peugeot 3008 Allure & GT disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "375 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1QI6JQYxgJCRJ1ycHtePIi_6Z-UGND8O-",
+    "pdfId": 12
+  },
+  {
+    "name": "MG ZS - Noir",
+    "brand": "MG",
+    "model": "ZS",
+    "year": 2023,
+    "type": "essential",
+    "price": 380,
+    "deposit": 1900,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-14/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-14/0.jpeg",
+      "/uploads/fleet/pdf-14/1.jpeg",
+      "/uploads/fleet/pdf-14/2.jpeg",
+      "/uploads/fleet/pdf-14/3.jpeg",
+      "/uploads/fleet/pdf-14/4.jpeg"
+    ],
+    "alt": "MG ZS - Noir available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 26,
+    "description": "MG ZS - Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "380 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "ESSENTIEL",
+        "className": "bg-primary/80 text-on-primary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/17OGeMxHKkdUS-_Z_-i2GRJnAISYScV5I",
+    "pdfId": 14
+  },
+  {
+    "name": "Audi A1",
+    "brand": "Audi",
+    "model": "A1",
+    "year": 2023,
+    "type": "premium",
+    "price": 415,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-15/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-15/0.jpeg",
+      "/uploads/fleet/pdf-15/1.jpeg",
+      "/uploads/fleet/pdf-15/2.jpeg",
+      "/uploads/fleet/pdf-15/3.jpeg"
+    ],
+    "alt": "Audi A1 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 27,
+    "description": "Audi A1 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "415 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1MtbV-p_HW_gkm5QdidOX9oKzIQM5oH7C",
+    "pdfId": 15
+  },
+  {
+    "name": "Mercedes-Benz Classe A - Gris",
+    "brand": "Mercedes-Benz",
+    "model": "Classe A",
+    "year": 2023,
+    "type": "premium",
+    "price": 415,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-16/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-16/0.jpeg",
+      "/uploads/fleet/pdf-16/1.jpeg",
+      "/uploads/fleet/pdf-16/2.jpeg",
+      "/uploads/fleet/pdf-16/3.jpeg"
+    ],
+    "alt": "Mercedes-Benz Classe A - Gris available for rent in Dubai.",
+    "color": "Gris",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 28,
+    "description": "Mercedes-Benz Classe A - Gris disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "415 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1zxTevZHw8-IutRVt3tp4eVGZ-fRaXDfV",
+    "pdfId": 16
+  },
+  {
+    "name": "Volkswagen T-Roc R-Line",
+    "brand": "Volkswagen",
+    "model": "T-Roc R-Line",
+    "year": 2023,
+    "type": "premium",
+    "price": 450,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-17/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-17/0.jpeg",
+      "/uploads/fleet/pdf-17/1.jpeg",
+      "/uploads/fleet/pdf-17/2.jpeg",
+      "/uploads/fleet/pdf-17/3.jpeg",
+      "/uploads/fleet/pdf-17/4.jpeg"
+    ],
+    "alt": "Volkswagen T-Roc R-Line available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 29,
+    "description": "Volkswagen T-Roc R-Line disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "450 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1-re9ZAwUtKw7Awu2sFGZSkksvUafppcJ",
+    "pdfId": 17
+  },
+  {
+    "name": "Volkswagen Golf 8 R-Line - 2025",
+    "brand": "Volkswagen",
+    "model": "Golf 8 R-Line",
+    "year": 2025,
+    "type": "premium",
+    "price": 465,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-18/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-18/0.jpeg",
+      "/uploads/fleet/pdf-18/1.jpeg",
+      "/uploads/fleet/pdf-18/2.jpeg",
+      "/uploads/fleet/pdf-18/3.jpeg",
+      "/uploads/fleet/pdf-18/4.jpeg",
+      "/uploads/fleet/pdf-18/5.jpeg"
+    ],
+    "alt": "Volkswagen Golf 8 R-Line - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 30,
+    "description": "Volkswagen Golf 8 R-Line - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "465 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1RKlMB52NBTQpQ6HlKL6GJonp3HknZaTE",
+    "pdfId": 18
+  },
+  {
+    "name": "Audi A3 Sportback S-Line - 2025",
+    "brand": "Audi",
+    "model": "A3 Sportback S-Line",
+    "year": 2025,
+    "type": "premium",
+    "price": 465,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-19/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-19/0.jpeg",
+      "/uploads/fleet/pdf-19/1.jpeg",
+      "/uploads/fleet/pdf-19/2.jpeg",
+      "/uploads/fleet/pdf-19/3.jpeg",
+      "/uploads/fleet/pdf-19/4.jpeg",
+      "/uploads/fleet/pdf-19/5.jpeg"
+    ],
+    "alt": "Audi A3 Sportback S-Line - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 31,
+    "description": "Audi A3 Sportback S-Line - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "465 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1kGlRJFxqNfIh5XZyZu6yOr2LYrGncSvD",
+    "pdfId": 19
+  },
+  {
+    "name": "Fiat 500 Abarth",
+    "brand": "Fiat",
+    "model": "500 Abarth",
+    "year": 2023,
+    "type": "premium",
+    "price": 495,
+    "deposit": 3000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-20/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-20/0.jpeg",
+      "/uploads/fleet/pdf-20/1.jpeg",
+      "/uploads/fleet/pdf-20/2.jpeg",
+      "/uploads/fleet/pdf-20/3.jpeg",
+      "/uploads/fleet/pdf-20/4.jpeg"
+    ],
+    "alt": "Fiat 500 Abarth available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 4,
+    "doors": 3,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 32,
+    "description": "Fiat 500 Abarth disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "495 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/16GQzu_g7mWSZBzA6Dh3BRUnuXF0KiGFe",
+    "pdfId": 20
+  },
+  {
+    "name": "BMW X3",
+    "brand": "BMW",
+    "model": "X3",
+    "year": 2023,
+    "type": "premium",
+    "price": 515,
+    "deposit": 3090,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-21/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-21/0.jpeg",
+      "/uploads/fleet/pdf-21/1.jpeg",
+      "/uploads/fleet/pdf-21/2.jpeg"
+    ],
+    "alt": "BMW X3 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 33,
+    "description": "BMW X3 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "515 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1sG7Z9DNI2Tl4dlTE_mPKz-mIcRtxZSs1",
+    "pdfId": 21
+  },
+  {
+    "name": "Audi Q3 S-Line - 2025",
+    "brand": "Audi",
+    "model": "Q3 S-Line",
+    "year": 2025,
+    "type": "premium",
+    "price": 515,
+    "deposit": 3090,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-22/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-22/0.jpeg",
+      "/uploads/fleet/pdf-22/1.jpeg",
+      "/uploads/fleet/pdf-22/2.jpeg",
+      "/uploads/fleet/pdf-22/3.jpeg",
+      "/uploads/fleet/pdf-22/4.jpeg"
+    ],
+    "alt": "Audi Q3 S-Line - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 34,
+    "description": "Audi Q3 S-Line - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "515 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/152uKMYy0kLlJX1WE20qMY4-opKX_7Eth",
+    "pdfId": 22
+  },
+  {
+    "name": "Mercedes-Benz Classe A - Noir - 2025",
+    "brand": "Mercedes-Benz",
+    "model": "Classe A",
+    "year": 2025,
+    "type": "premium",
+    "price": 515,
+    "deposit": 3090,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-23/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-23/0.jpeg",
+      "/uploads/fleet/pdf-23/1.jpeg",
+      "/uploads/fleet/pdf-23/2.jpeg",
+      "/uploads/fleet/pdf-23/3.jpeg",
+      "/uploads/fleet/pdf-23/4.jpeg",
+      "/uploads/fleet/pdf-23/5.jpeg"
+    ],
+    "alt": "Mercedes-Benz Classe A - Noir - 2025 available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 35,
+    "description": "Mercedes-Benz Classe A - Noir - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "515 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1ZNrCOLpVnl-WS3R-8qNTjrF9dPaVYYeJ",
+    "pdfId": 23
+  },
+  {
+    "name": "Volkswagen Tiguan R-Line - 2025",
+    "brand": "Volkswagen",
+    "model": "Tiguan R-Line",
+    "year": 2025,
+    "type": "premium",
+    "price": 550,
+    "deposit": 3300,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-24/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-24/0.jpeg",
+      "/uploads/fleet/pdf-24/1.jpeg",
+      "/uploads/fleet/pdf-24/2.jpeg",
+      "/uploads/fleet/pdf-24/3.jpeg",
+      "/uploads/fleet/pdf-24/4.jpeg"
+    ],
+    "alt": "Volkswagen Tiguan R-Line - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 36,
+    "description": "Volkswagen Tiguan R-Line - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "550 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/176b9e89iOWRc_MedFAc3zwmgsqhPjruQ",
+    "pdfId": 24
+  },
+  {
+    "name": "BMW X1",
+    "brand": "BMW",
+    "model": "X1",
+    "year": 2023,
+    "type": "premium",
+    "price": 615,
+    "deposit": 3690,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-25/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-25/0.jpeg",
+      "/uploads/fleet/pdf-25/1.jpeg",
+      "/uploads/fleet/pdf-25/2.jpeg"
+    ],
+    "alt": "BMW X1 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 37,
+    "description": "BMW X1 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "615 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Z1a5lGAgPnqD7sYRf7Xn0JMxlWq-JFv2",
+    "pdfId": 25
+  },
+  {
+    "name": "Mercedes-Benz GLC 300 - Blanc",
+    "brand": "Mercedes-Benz",
+    "model": "GLC 300",
+    "year": 2023,
+    "type": "premium",
+    "price": 650,
+    "deposit": 3900,
+    "dailyKm": 250,
+    "featured": true,
+    "image": "/uploads/fleet/pdf-26/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-26/0.jpeg",
+      "/uploads/fleet/pdf-26/1.jpeg",
+      "/uploads/fleet/pdf-26/2.jpeg"
+    ],
+    "alt": "Mercedes-Benz GLC 300 - Blanc available for rent in Dubai.",
+    "color": "Blanc",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 38,
+    "description": "Mercedes-Benz GLC 300 - Blanc disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "650 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1GM2Cl6EjGHuxg767X_rEgs1_scNBt6oj",
+    "pdfId": 26
+  },
+  {
+    "name": "Mercedes-AMG GLA 35",
+    "brand": "Mercedes-AMG",
+    "model": "GLA 35",
+    "year": 2023,
+    "type": "premium",
+    "price": 675,
+    "deposit": 4050,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-27/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-27/0.jpeg",
+      "/uploads/fleet/pdf-27/1.jpeg",
+      "/uploads/fleet/pdf-27/2.jpeg",
+      "/uploads/fleet/pdf-27/3.jpeg"
+    ],
+    "alt": "Mercedes-AMG GLA 35 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 39,
+    "description": "Mercedes-AMG GLA 35 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "675 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1vXlMxz68FfrdbFiqhXqabJkG9SvnP0sJ",
+    "pdfId": 27
+  },
+  {
+    "name": "Jetour T2 - 2025",
+    "brand": "Jetour",
+    "model": "T2",
+    "year": 2025,
+    "type": "premium",
+    "price": 750,
+    "deposit": 4500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-28/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-28/0.jpeg",
+      "/uploads/fleet/pdf-28/1.jpeg",
+      "/uploads/fleet/pdf-28/2.jpeg",
+      "/uploads/fleet/pdf-28/3.jpeg",
+      "/uploads/fleet/pdf-28/4.jpeg",
+      "/uploads/fleet/pdf-28/5.jpeg"
+    ],
+    "alt": "Jetour T2 - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 40,
+    "description": "Jetour T2 - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "750 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1wiXt8i5ywpL4WTCylH2GqawxCHRMa70W",
+    "pdfId": 28
+  },
+  {
+    "name": "Audi Q5 Sportback - Noir - 2022",
+    "brand": "Audi",
+    "model": "Q5 Sportback",
+    "year": 2022,
+    "type": "premium",
+    "price": 750,
+    "deposit": 4500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-29/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-29/0.jpeg",
+      "/uploads/fleet/pdf-29/1.jpeg",
+      "/uploads/fleet/pdf-29/2.jpeg",
+      "/uploads/fleet/pdf-29/3.jpeg"
+    ],
+    "alt": "Audi Q5 Sportback - Noir - 2022 available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 41,
+    "description": "Audi Q5 Sportback - Noir - 2022 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "750 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1BT42h9_Xx32J0Mvpjoo1-oKAUCBoRnft",
+    "pdfId": 29
+  },
+  {
+    "name": "Audi S3 - Noir",
+    "brand": "Audi",
+    "model": "S3",
+    "year": 2023,
+    "type": "premium",
+    "price": 750,
+    "deposit": 4500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-30/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-30/0.jpeg",
+      "/uploads/fleet/pdf-30/1.jpeg",
+      "/uploads/fleet/pdf-30/2.jpeg"
+    ],
+    "alt": "Audi S3 - Noir available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 42,
+    "description": "Audi S3 - Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "750 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Vu4RQn7N0fmkeaVWHMbAplwZcuvDWamM",
+    "pdfId": 30
+  },
+  {
+    "name": "Audi S3 - Gris",
+    "brand": "Audi",
+    "model": "S3",
+    "year": 2023,
+    "type": "premium",
+    "price": 815,
+    "deposit": 4890,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-31/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-31/0.jpeg",
+      "/uploads/fleet/pdf-31/1.jpeg",
+      "/uploads/fleet/pdf-31/2.jpeg",
+      "/uploads/fleet/pdf-31/3.jpeg",
+      "/uploads/fleet/pdf-31/4.jpeg",
+      "/uploads/fleet/pdf-31/5.jpeg"
+    ],
+    "alt": "Audi S3 - Gris available for rent in Dubai.",
+    "color": "Gris",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 43,
+    "description": "Audi S3 - Gris disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "815 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1n-qB58OfcVc4DtsRf__ceOMArhNkIv7b",
+    "pdfId": 31
+  },
+  {
+    "name": "Audi RSQ3 - Bleu",
+    "brand": "Audi",
+    "model": "RSQ3",
+    "year": 2023,
+    "type": "premium",
+    "price": 815,
+    "deposit": 4890,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-32/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-32/0.jpeg",
+      "/uploads/fleet/pdf-32/1.jpeg",
+      "/uploads/fleet/pdf-32/2.jpeg",
+      "/uploads/fleet/pdf-32/3.jpeg",
+      "/uploads/fleet/pdf-32/4.jpeg",
+      "/uploads/fleet/pdf-32/5.jpeg"
+    ],
+    "alt": "Audi RSQ3 - Bleu available for rent in Dubai.",
+    "color": "Bleu",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 44,
+    "description": "Audi RSQ3 - Bleu disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "815 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1MTuSjDGwdmPmI1fpkI1YO2zwAei8BFA0",
+    "pdfId": 32
+  },
+  {
+    "name": "BMW X2 35i M",
+    "brand": "BMW",
+    "model": "X2 35i M",
+    "year": 2023,
+    "type": "premium",
+    "price": 850,
+    "deposit": 5100,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-33/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-33/0.jpeg",
+      "/uploads/fleet/pdf-33/1.jpeg",
+      "/uploads/fleet/pdf-33/2.jpeg",
+      "/uploads/fleet/pdf-33/3.jpeg"
+    ],
+    "alt": "BMW X2 35i M available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 45,
+    "description": "BMW X2 35i M disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "850 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1fTEg_Fs3J_WuWNGFYoOkWXpxTgW4a6sr",
+    "pdfId": 33
+  },
+  {
+    "name": "BMW Série 4 Cabriolet",
+    "brand": "BMW",
+    "model": "Série 4 Cabriolet",
+    "year": 2023,
+    "type": "premium",
+    "price": 850,
+    "deposit": 5100,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-34/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-34/0.jpeg"
+    ],
+    "alt": "BMW Série 4 Cabriolet available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 4,
+    "doors": 2,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 46,
+    "description": "BMW Série 4 Cabriolet disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "850 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1oekduKempDgvY48EmSQPIcuG1sGK0ge7",
+    "pdfId": 34
+  },
+  {
+    "name": "Audi RS4 - Noir Hermes",
+    "brand": "Audi",
+    "model": "RS4",
+    "year": 2023,
+    "type": "premium",
+    "price": 915,
+    "deposit": 5490,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-36/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-36/0.jpeg",
+      "/uploads/fleet/pdf-36/1.jpeg",
+      "/uploads/fleet/pdf-36/2.jpeg",
+      "/uploads/fleet/pdf-36/3.jpeg",
+      "/uploads/fleet/pdf-36/4.jpeg",
+      "/uploads/fleet/pdf-36/5.jpeg"
+    ],
+    "alt": "Audi RS4 - Noir Hermes available for rent in Dubai.",
+    "color": "Noir Hermes",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 48,
+    "description": "Audi RS4 - Noir Hermes disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "915 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Xek7rUX2mnuS8oGG_arBfC1gP1a0p-KE",
+    "pdfId": 36
+  },
+  {
+    "name": "Audi RS3 - Entièrement Noir - 2025",
+    "brand": "Audi",
+    "model": "RS3",
+    "year": 2025,
+    "type": "premium",
+    "price": 950,
+    "deposit": 5700,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-37/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-37/0.jpeg",
+      "/uploads/fleet/pdf-37/1.jpeg",
+      "/uploads/fleet/pdf-37/2.jpeg",
+      "/uploads/fleet/pdf-37/3.jpeg",
+      "/uploads/fleet/pdf-37/4.jpeg"
+    ],
+    "alt": "Audi RS3 - Entièrement Noir - 2025 available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 49,
+    "description": "Audi RS3 - Entièrement Noir - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "950 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1g8JL1K4qD21duf6lkbdb98Un2MXZDucU",
+    "pdfId": 37
+  },
+  {
+    "name": "Audi RS3 - Gris Nardo",
+    "brand": "Audi",
+    "model": "RS3",
+    "year": 2023,
+    "type": "premium",
+    "price": 950,
+    "deposit": 5700,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-38/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-38/0.jpeg",
+      "/uploads/fleet/pdf-38/1.jpeg",
+      "/uploads/fleet/pdf-38/2.jpeg"
+    ],
+    "alt": "Audi RS3 - Gris Nardo available for rent in Dubai.",
+    "color": "Gris Nardo",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 50,
+    "description": "Audi RS3 - Gris Nardo disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "950 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PREMIUM",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1HyBrpem-x888x68SIKDtif2tnoYKZsOT",
+    "pdfId": 38
+  },
+  {
+    "name": "Porsche Macan - Noir",
+    "brand": "Porsche",
+    "model": "Macan",
+    "year": 2023,
+    "type": "prestige",
+    "price": 990,
+    "deposit": 8000,
+    "dailyKm": 250,
+    "featured": true,
+    "image": "/uploads/fleet/pdf-39/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-39/0.jpeg",
+      "/uploads/fleet/pdf-39/1.jpeg",
+      "/uploads/fleet/pdf-39/2.jpeg",
+      "/uploads/fleet/pdf-39/3.jpeg",
+      "/uploads/fleet/pdf-39/4.jpeg"
+    ],
+    "alt": "Porsche Macan - Noir available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 51,
+    "description": "Porsche Macan - Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "990 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1y0YjacEXYfArT0qoMyONL4t3HRADvie0",
+    "pdfId": 39
+  },
+  {
+    "name": "Porsche Macan S - Gris Nardo / Intérieur Bleu",
+    "brand": "Porsche",
+    "model": "Macan S",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1190,
+    "deposit": 9520,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-40/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-40/0.jpeg",
+      "/uploads/fleet/pdf-40/1.jpeg",
+      "/uploads/fleet/pdf-40/2.jpeg"
+    ],
+    "alt": "Porsche Macan S - Gris Nardo / Intérieur Bleu available for rent in Dubai.",
+    "color": "Gris Nardo",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 12,
+    "description": "Porsche Macan S - Gris Nardo / Intérieur Bleu disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1190 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1CXFGtfsB-rAbabVmxI1oHa8I6RlECV4G",
+    "pdfId": 40
+  },
+  {
+    "name": "Porsche Macan S - Gris Nardo / Intérieur Noir",
+    "brand": "Porsche",
+    "model": "Macan S",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1190,
+    "deposit": 9520,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-41/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-41/0.jpeg"
+    ],
+    "alt": "Porsche Macan S - Gris Nardo / Intérieur Noir available for rent in Dubai.",
+    "color": "Gris Nardo",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 13,
+    "description": "Porsche Macan S - Gris Nardo / Intérieur Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1190 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1TfNuhVX1JUwC8VjdqmiY-G83Y53qVg8r",
+    "pdfId": 41
+  },
+  {
+    "name": "Porsche Macan GTS - Noir",
+    "brand": "Porsche",
+    "model": "Macan GTS",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1190,
+    "deposit": 9520,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-42/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-42/0.jpeg",
+      "/uploads/fleet/pdf-42/1.jpeg",
+      "/uploads/fleet/pdf-42/2.jpeg"
+    ],
+    "alt": "Porsche Macan GTS - Noir available for rent in Dubai.",
+    "color": "Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 14,
+    "description": "Porsche Macan GTS - Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1190 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1SBOPxWVeEriuT9FzNGUlVB7RrH3E9ge7",
+    "pdfId": 42
+  },
+  {
+    "name": "Porsche Cayenne - Gris Nardo",
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1190,
+    "deposit": 9520,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-43/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-43/0.jpeg",
+      "/uploads/fleet/pdf-43/1.jpeg",
+      "/uploads/fleet/pdf-43/2.jpeg",
+      "/uploads/fleet/pdf-43/3.jpeg"
+    ],
+    "alt": "Porsche Cayenne - Gris Nardo available for rent in Dubai.",
+    "color": "Gris Nardo",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 15,
+    "description": "Porsche Cayenne - Gris Nardo disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1190 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1SOcup0Vx_ZOm2cqcXfOIkKs4rlXIx6Nq",
+    "pdfId": 43
+  },
+  {
+    "name": "Mercedes-AMG C 63",
+    "brand": "Mercedes-AMG",
+    "model": "C 63",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1315,
+    "deposit": 10520,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-45/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-45/0.jpeg",
+      "/uploads/fleet/pdf-45/1.jpeg",
+      "/uploads/fleet/pdf-45/2.jpeg",
+      "/uploads/fleet/pdf-45/3.jpeg"
+    ],
+    "alt": "Mercedes-AMG C 63 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 4,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 17,
+    "description": "Mercedes-AMG C 63 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1315 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1M7Z2IkWxC19SSEyBmoOBmN4n7kD2mRbS",
+    "pdfId": 45
+  },
+  {
+    "name": "BMW X6M Compétition",
+    "brand": "BMW",
+    "model": "X6M Competition",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1415,
+    "deposit": 11320,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-46/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-46/0.jpeg",
+      "/uploads/fleet/pdf-46/1.jpeg",
+      "/uploads/fleet/pdf-46/2.jpeg",
+      "/uploads/fleet/pdf-46/3.jpeg",
+      "/uploads/fleet/pdf-46/4.jpeg"
+    ],
+    "alt": "BMW X6M Compétition available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 18,
+    "description": "BMW X6M Compétition disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1415 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1eH84Shq3tX8pbBsTdt3sEA0FEi1N_WTA",
+    "pdfId": 46
+  },
+  {
+    "name": "Audi RSQ8",
+    "brand": "Audi",
+    "model": "RSQ8",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1415,
+    "deposit": 11320,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-47/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-47/0.jpeg",
+      "/uploads/fleet/pdf-47/1.jpeg",
+      "/uploads/fleet/pdf-47/2.jpeg",
+      "/uploads/fleet/pdf-47/3.jpeg",
+      "/uploads/fleet/pdf-47/4.jpeg",
+      "/uploads/fleet/pdf-47/5.jpeg"
+    ],
+    "alt": "Audi RSQ8 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 19,
+    "description": "Audi RSQ8 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1415 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1OaLENw9htwqzI6kzZ7IF-UMGrl4q2CyS",
+    "pdfId": 47
+  },
+  {
+    "name": "Audi RS6 - Noir ou Gris",
+    "brand": "Audi",
+    "model": "RS6",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1515,
+    "deposit": 12120,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-48/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-48/0.jpeg",
+      "/uploads/fleet/pdf-48/1.jpeg",
+      "/uploads/fleet/pdf-48/2.jpeg",
+      "/uploads/fleet/pdf-48/3.jpeg"
+    ],
+    "alt": "Audi RS6 - Noir ou Gris available for rent in Dubai.",
+    "color": "Noir / Gris",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 20,
+    "description": "Audi RS6 - Noir ou Gris disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1515 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1LcFLfF6M4RxcOVhhLyyNdx6knhhDOvd_",
+    "pdfId": 48
+  },
+  {
+    "name": "Audi RSQ8 Performance",
+    "brand": "Audi",
+    "model": "RSQ8 Performance",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1515,
+    "deposit": 12120,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-49/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-49/0.jpeg",
+      "/uploads/fleet/pdf-49/1.jpeg",
+      "/uploads/fleet/pdf-49/2.jpeg",
+      "/uploads/fleet/pdf-49/3.jpeg"
+    ],
+    "alt": "Audi RSQ8 Performance available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 21,
+    "description": "Audi RSQ8 Performance disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1515 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1ZF-IDdmVpavxXcvg5E4qT3dcHeLXomNP",
+    "pdfId": 49
+  },
+  {
+    "name": "Mercedes-Benz SL 63 AMG",
+    "brand": "Mercedes-Benz",
+    "model": "SL 63 AMG",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1850,
+    "deposit": 14800,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-51/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-51/0.jpeg",
+      "/uploads/fleet/pdf-51/1.jpeg",
+      "/uploads/fleet/pdf-51/2.jpeg",
+      "/uploads/fleet/pdf-51/3.jpeg",
+      "/uploads/fleet/pdf-51/4.jpeg",
+      "/uploads/fleet/pdf-51/5.jpeg"
+    ],
+    "alt": "Mercedes-Benz SL 63 AMG available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 2,
+    "doors": 2,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 23,
+    "description": "Mercedes-Benz SL 63 AMG disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1850 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1WQfj6KFC9zcdcXhpgfVH8hQbckF0t8ya",
+    "pdfId": 51
+  },
+  {
+    "name": "Mercedes-Benz G 63 AMG - 2025",
+    "brand": "Mercedes-Benz",
+    "model": "G 63 AMG",
+    "year": 2025,
+    "type": "prestige",
+    "price": 1850,
+    "deposit": 14800,
+    "dailyKm": 250,
+    "featured": true,
+    "image": "/uploads/fleet/pdf-52/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-52/0.jpeg",
+      "/uploads/fleet/pdf-52/1.jpeg",
+      "/uploads/fleet/pdf-52/2.jpeg",
+      "/uploads/fleet/pdf-52/3.jpeg",
+      "/uploads/fleet/pdf-52/4.jpeg",
+      "/uploads/fleet/pdf-52/5.jpeg"
+    ],
+    "alt": "Mercedes-Benz G 63 AMG - 2025 available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 24,
+    "description": "Mercedes-Benz G 63 AMG - 2025 disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1850 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1THadro1AZ2rjvxrbWHtWvIeKg9sD9647",
+    "pdfId": 52
+  },
+  {
+    "name": "Mercedes-Benz G 900 Rocket",
+    "brand": "Mercedes-Benz",
+    "model": "G 900 Rocket",
+    "year": 2023,
+    "type": "prestige",
+    "price": 1915,
+    "deposit": 15320,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-53/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-53/0.jpeg",
+      "/uploads/fleet/pdf-53/1.jpeg",
+      "/uploads/fleet/pdf-53/2.jpeg",
+      "/uploads/fleet/pdf-53/3.jpeg"
+    ],
+    "alt": "Mercedes-Benz G 900 Rocket available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 25,
+    "description": "Mercedes-Benz G 900 Rocket disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "1915 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/15ZvSJzVx_zlcDdtsXzgAVd6Hh3tSTlCu",
+    "pdfId": 53
+  },
+  {
+    "name": "Mercedes-Benz G 800 Brabus - Noir/Tiffany",
+    "brand": "Mercedes-Benz",
+    "model": "G 800 Brabus",
+    "year": 2023,
+    "type": "prestige",
+    "price": 2115,
+    "deposit": 16920,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-54/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-54/0.jpeg",
+      "/uploads/fleet/pdf-54/1.jpeg",
+      "/uploads/fleet/pdf-54/2.jpeg",
+      "/uploads/fleet/pdf-54/3.jpeg",
+      "/uploads/fleet/pdf-54/4.jpeg",
+      "/uploads/fleet/pdf-54/5.jpeg"
+    ],
+    "alt": "Mercedes-Benz G 800 Brabus - Noir/Tiffany available for rent in Dubai.",
+    "color": "Noir / Tiffany",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 26,
+    "description": "Mercedes-Benz G 800 Brabus - Noir/Tiffany disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "2115 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1od7OlKK4FPsQk00i9Bx-DXUSZJGtddmf",
+    "pdfId": 54
+  },
+  {
+    "name": "Mercedes-Benz G 800 Brabus - Blanc/Alcantara Noir",
+    "brand": "Mercedes-Benz",
+    "model": "G 800 Brabus",
+    "year": 2023,
+    "type": "prestige",
+    "price": 2115,
+    "deposit": 16920,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-55/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-55/0.jpeg",
+      "/uploads/fleet/pdf-55/1.jpeg",
+      "/uploads/fleet/pdf-55/2.jpeg",
+      "/uploads/fleet/pdf-55/3.jpeg"
+    ],
+    "alt": "Mercedes-Benz G 800 Brabus - Blanc/Alcantara Noir available for rent in Dubai.",
+    "color": "Blanc",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 27,
+    "description": "Mercedes-Benz G 800 Brabus - Blanc/Alcantara Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "2115 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1QlHyB1McOyHnM_wqALsvhHPhPNInK2Tk",
+    "pdfId": 55
+  },
+  {
+    "name": "Mercedes-Benz G 800 Brabus - Intérieur Noir/Vert",
+    "brand": "Mercedes-Benz",
+    "model": "G 800 Brabus",
+    "year": 2023,
+    "type": "prestige",
+    "price": 2115,
+    "deposit": 16920,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-56/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-56/0.jpeg",
+      "/uploads/fleet/pdf-56/1.jpeg"
+    ],
+    "alt": "Mercedes-Benz G 800 Brabus - Intérieur Noir/Vert available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 28,
+    "description": "Mercedes-Benz G 800 Brabus - Intérieur Noir/Vert disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "2115 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "PRESTIGE",
+        "className": "bg-tertiary text-on-tertiary"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Rn_0O5d0m5p7zAur3QcOSrA1QuBdFXza",
+    "pdfId": 56
+  },
+  {
+    "name": "Lamborghini Urus - Gris/Noir",
+    "brand": "Lamborghini",
+    "model": "Urus",
+    "year": 2023,
+    "type": "supercar",
+    "price": 2650,
+    "deposit": 15000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-59/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-59/0.jpeg",
+      "/uploads/fleet/pdf-59/1.jpeg",
+      "/uploads/fleet/pdf-59/2.jpeg",
+      "/uploads/fleet/pdf-59/3.jpeg",
+      "/uploads/fleet/pdf-59/4.jpeg",
+      "/uploads/fleet/pdf-59/5.jpeg"
+    ],
+    "alt": "Lamborghini Urus - Gris/Noir available for rent in Dubai.",
+    "color": "Gris / Noir",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "AWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 31,
+    "description": "Lamborghini Urus - Gris/Noir disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "2650 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "SUPERCAR",
+        "className": "bg-primary/80 text-on-primary"
+      },
+      {
+        "label": "ULTRA LUXE",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1Ksk_xT56Oqq8QsJr0p3kHuhrrkoG_XW0",
+    "pdfId": 59
+  },
+  {
+    "name": "Lamborghini Urus Capsule",
+    "brand": "Lamborghini",
+    "model": "Urus Capsule",
+    "year": 2023,
+    "type": "supercar",
+    "price": 2815,
+    "deposit": 15000,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-61/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-61/0.jpeg",
+      "/uploads/fleet/pdf-61/1.jpeg",
+      "/uploads/fleet/pdf-61/2.jpeg",
+      "/uploads/fleet/pdf-61/3.jpeg",
+      "/uploads/fleet/pdf-61/4.jpeg"
+    ],
+    "alt": "Lamborghini Urus Capsule available for rent in Dubai.",
+    "color": "Sur demande",
+    "transmission": "Automatique",
+    "seats": 5,
+    "doors": 5,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 33,
+    "description": "Lamborghini Urus Capsule disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "2815 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "SUPERCAR",
+        "className": "bg-primary/80 text-on-primary"
+      },
+      {
+        "label": "ULTRA LUXE",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1lfmyfBm45OHzMgbUk79n7sfH21Cywqsh",
+    "pdfId": 61
+  },
+  {
+    "name": "Lamborghini Huracan EVO Spyder - Bleu",
+    "brand": "Lamborghini",
+    "model": "Huracan EVO Spyder",
+    "year": 2023,
+    "type": "supercar",
+    "price": 3100,
+    "deposit": 15500,
+    "dailyKm": 250,
+    "featured": false,
+    "image": "/uploads/fleet/pdf-64/0.jpeg",
+    "gallery": [
+      "/uploads/fleet/pdf-64/0.jpeg",
+      "/uploads/fleet/pdf-64/1.jpeg",
+      "/uploads/fleet/pdf-64/2.jpeg",
+      "/uploads/fleet/pdf-64/3.jpeg",
+      "/uploads/fleet/pdf-64/4.jpeg",
+      "/uploads/fleet/pdf-64/5.jpeg"
+    ],
+    "alt": "Lamborghini Huracan EVO Spyder - Bleu available for rent in Dubai.",
+    "color": "Bleu",
+    "transmission": "Automatique",
+    "seats": 2,
+    "doors": 2,
+    "powertrain": "Essence",
+    "drivetrain": "FWD",
+    "horsepower": null,
+    "acceleration": null,
+    "topSpeed": null,
+    "fuel": "Essence",
+    "rating": 4.9,
+    "reviews": 36,
+    "description": "Lamborghini Huracan EVO Spyder - Bleu disponible à la location à Dubai avec Dubai À La Carte. Conciergerie, Salik inclus et livraison gratuite.",
+    "highlights": [
+      "3100 AED / jour",
+      "250 km/jour inclus",
+      "Livraison Dubai offerte"
+    ],
+    "features": [
+      "Climatisation",
+      "Bluetooth / Apple CarPlay selon modèle",
+      "Assurance selon conditions"
+    ],
+    "included": [
+      "Assurance incluse (selon conditions)",
+      "Salik inclus",
+      "250 km/jour inclus",
+      "Livraison gratuite partout à Dubai (7h–minuit)"
+    ],
+    "requirements": [
+      "Permis de conduire (EAU ou international)",
+      "Passeport ou carte d'identité des Émirats",
+      "Dépôt de garantie remboursable",
+      "Âge minimum : 21 ans"
+    ],
+    "badges": [
+      {
+        "label": "SUPERCAR",
+        "className": "bg-primary/80 text-on-primary"
+      },
+      {
+        "label": "ULTRA LUXE",
+        "className": "bg-secondary-container text-on-secondary-container"
+      }
+    ],
+    "locations": [
+      "dubai-marina",
+      "downtown",
+      "palm-jumeirah",
+      "dxb-airport"
+    ],
+    "driveFolder": "https://drive.google.com/drive/folders/1pi1yd_9DVfN1XfKx16Dam4smF78FGy3R",
+    "pdfId": 64
+  }
+]

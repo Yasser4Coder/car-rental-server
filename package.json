@@ -1,0 +1,28 @@
+{
+  "name": "car-rental-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:sync": "node src/scripts/syncDb.js",
+    "db:seed": "node src/seeders/seed.js",
+    "db:indexes": "node src/scripts/runEnsureIndexes.js",
+    "fleet:import": "python src/seeders/importFleetFromPdf.py"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7",
+    "zod": "^3.25.28"
+  }
+}
