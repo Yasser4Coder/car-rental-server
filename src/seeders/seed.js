@@ -3,14 +3,18 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { env } from '../config/env.js';
-import { Booking, Car, User, sequelize } from '../models/index.js';
+import { Booking, Car, User } from '../models/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const fleetPath = path.join(__dirname, 'fleetFromPdf.json');
+export const fleetPath = path.join(__dirname, 'fleetFromPdf.json');
 
-async function seed() {
-  await sequelize.authenticate();
-  await sequelize.sync({ alter: true });
+/**
+ * Seed admin + fleet cars.
+ * @param {{ forceCars?: boolean }} [options]
+ *   forceCars — wipe/replace cars even if some already exist
+ */
+export async function seedDatabase(options = {}) {
+  const { forceCars = false } = options;
 
   const passwordHash = await bcrypt.hash(env.admin.password, 12);
   const [admin, created] = await User.findOrCreate({
@@ -33,20 +37,27 @@ async function seed() {
     await admin.save();
   }
 
+  const carCount = await Car.count();
+  if (carCount > 0 && !forceCars) {
+    console.log(`[seed] Admin ready (${env.admin.email}); cars already present (${carCount}), skipping fleet seed`);
+    return { adminEmail: env.admin.email, carsSeeded: 0, skippedCars: true };
+  }
+
   if (!fs.existsSync(fleetPath)) {
     throw new Error(
-      'Missing fleetFromPdf.json. Run: python src/seeders/importFleetFromPdf.py',
+      'Missing fleetFromPdf.json. Run fleet import first (automatic on first boot, or: npm run fleet:import)',
     );
   }
 
   const fleet = JSON.parse(fs.readFileSync(fleetPath, 'utf8'));
   const bookingCount = await Booking.count();
 
-  if (bookingCount > 0) {
-    // Soft-replace: deactivate old cars, insert fleet if empty of active PDF cars
-    await Car.update({ isActive: false }, { where: {} });
-  } else {
-    await Car.destroy({ where: {}, force: true });
+  if (forceCars || carCount > 0) {
+    if (bookingCount > 0) {
+      await Car.update({ isActive: false }, { where: {} });
+    } else {
+      await Car.destroy({ where: {}, force: true });
+    }
   }
 
   const rows = fleet.map(({ driveFolder, pdfId, ...car }) => ({
@@ -55,12 +66,21 @@ async function seed() {
   }));
 
   await Car.bulkCreate(rows);
-  console.log(`Seeded ${rows.length} cars from Dubai À La Carte PDF`);
-  console.log(`Admin ready: ${env.admin.email}`);
-  process.exit(0);
+  console.log(`[seed] Seeded ${rows.length} cars · admin ${env.admin.email}`);
+  return { adminEmail: env.admin.email, carsSeeded: rows.length, skippedCars: false };
 }
 
-seed().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// CLI: npm run db:seed
+const isCli = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+if (isCli) {
+  const { sequelize } = await import('../models/index.js');
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync({ alter: true });
+    await seedDatabase({ forceCars: process.argv.includes('--force') });
+    process.exit(0);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+}

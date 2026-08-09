@@ -8,8 +8,10 @@
     "start": "node src/server.js",
     "db:sync": "node src/scripts/syncDb.js",
     "db:seed": "node src/seeders/seed.js",
+    "db:seed:force": "node src/seeders/seed.js --force",
     "db:indexes": "node src/scripts/runEnsureIndexes.js",
-    "fleet:import": "python src/seeders/importFleetFromPdf.py"
+    "fleet:import": "python src/seeders/importFleetFromPdf.py",
+    "bootstrap:reset": "node src/scripts/resetBootstrap.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",

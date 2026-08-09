@@ -3,6 +3,7 @@ import User from './User.js';
 import Car from './Car.js';
 import Booking from './Booking.js';
 import RefreshToken from './RefreshToken.js';
+import AppBootstrap from './AppBootstrap.js';
 
 User.hasMany(Booking, { foreignKey: 'userId', as: 'bookings' });
 Booking.belongsTo(User, { foreignKey: 'userId', as: 'user' });
@@ -13,4 +14,4 @@ Booking.belongsTo(Car, { foreignKey: 'carId', as: 'car' });
 User.hasMany(RefreshToken, { foreignKey: 'userId', as: 'refreshTokens' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
-export { sequelize, User, Car, Booking, RefreshToken };
+export { sequelize, User, Car, Booking, RefreshToken, AppBootstrap };

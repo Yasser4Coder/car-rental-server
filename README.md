@@ -31,21 +31,33 @@ Key variables:
 | `ADMIN_URL` | Admin origin (`http://localhost:5174`) |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Seeded admin account |
 
-3. Install, import fleet photos from the PDF Drive links (optional but recommended), then seed:
+3. Install and start — bootstrap runs once automatically:
 
 ```bash
 npm install
-npm run fleet:import   # downloads Drive photos → uploads/fleet + fleetFromPdf.json
-npm run db:seed
-```
-
-Seed creates the admin user and loads the Dubai À La Carte fleet (67 cars) from `src/seeders/fleetFromPdf.json`.
-
-4. Start the API:
-
-```bash
 npm run dev
 ```
+
+On first start the server will:
+1. Sync tables
+2. Create search indexes (once)
+3. Run `fleet:import` if `fleetFromPdf.json` is missing (once; needs Python)
+4. Seed admin + cars (once)
+
+Progress is stored in the `app_bootstrap` table. Later starts skip finished steps.
+
+Force a full re-run:
+
+```bash
+# option A
+FORCE_BOOTSTRAP=1 npm run dev
+
+# option B
+npm run bootstrap:reset
+npm run dev
+```
+
+Manual scripts still work: `npm run fleet:import`, `npm run db:seed`, `npm run db:indexes`.
 
 API runs at `http://localhost:5000`. Health check: `GET /api/health`.
 
@@ -56,8 +68,11 @@ API runs at `http://localhost:5000`. Health check: `GET /api/health`.
 | `npm run dev` | Watch mode (`node --watch`) |
 | `npm start` | Production start |
 | `npm run db:sync` | Sync Sequelize models |
-| `npm run db:seed` | Sync + seed admin + cars |
+| `npm run db:seed` | Upsert admin; seed cars if empty |
+| `npm run db:seed:force` | Replace fleet cars from JSON |
 | `npm run db:indexes` | Create search/filter indexes (FULLTEXT + composites) |
+| `npm run bootstrap:reset` | Clear one-time bootstrap flags |
+| `npm run fleet:import` | Download Drive photos → `fleetFromPdf.json` |
 
 ## Search / filter performance
 
