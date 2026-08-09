@@ -69,18 +69,3 @@ export async function seedDatabase(options = {}) {
   console.log(`[seed] Seeded ${rows.length} cars · admin ${env.admin.email}`);
   return { adminEmail: env.admin.email, carsSeeded: rows.length, skippedCars: false };
 }
-
-// CLI: npm run db:seed
-const isCli = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
-if (isCli) {
-  const { sequelize } = await import('../models/index.js');
-  try {
-    await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
-    await seedDatabase({ forceCars: process.argv.includes('--force') });
-    process.exit(0);
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
-}
