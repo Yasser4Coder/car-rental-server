@@ -30,6 +30,18 @@ export const carFilterSchema = z.object({
 
 export const carBodySchema = z.object({
   name: z.string().trim().min(2).max(160),
+  slug: z
+    .union([
+      z.literal(''),
+      z
+        .string()
+        .trim()
+        .min(2)
+        .max(180)
+        .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Use lowercase letters, numbers, and hyphens'),
+    ])
+    .optional()
+    .nullable(),
   brand: z.string().trim().min(1).max(80),
   model: z.string().trim().min(1).max(120),
   year: z.coerce.number().int().min(1990).max(2100),

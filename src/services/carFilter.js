@@ -11,6 +11,7 @@ const BUSY_STATUSES = ['pending', 'confirmed', 'active'];
 export const CAR_LIST_ATTRIBUTES = [
   'id',
   'name',
+  'slug',
   'brand',
   'model',
   'year',
@@ -39,6 +40,7 @@ export const CAR_LIST_ATTRIBUTES = [
 export const CAR_FEATURED_ATTRIBUTES = [
   'id',
   'name',
+  'slug',
   'brand',
   'model',
   'year',

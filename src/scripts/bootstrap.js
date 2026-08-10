@@ -6,6 +6,7 @@ import { AppBootstrap, Car, sequelize } from '../models/index.js';
 import { ensureSearchIndexes } from './ensureSearchIndexes.js';
 import { ensureFleetAssets, getUploadsRoot } from './ensureFleetAssets.js';
 import { fleetPath, seedDatabase } from '../seeders/seed.js';
+import { backfillCarSlugs } from '../utils/carSlug.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const importScript = path.join(__dirname, '../seeders/importFleetFromPdf.py');
@@ -139,6 +140,13 @@ export async function runBootstrap() {
   await bootstrapIndexes();
   await bootstrapFleetImportMeta();
   await bootstrapSeed();
+
+  try {
+    const filled = await backfillCarSlugs();
+    if (filled) console.log(`[bootstrap] backfilled ${filled} car slugs`);
+  } catch (err) {
+    console.warn(`[bootstrap] slug backfill skipped: ${err.message}`);
+  }
 }
 
 /** Slow jobs after listen() — restore missing Drive photos. */

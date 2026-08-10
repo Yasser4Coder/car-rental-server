@@ -12,6 +12,11 @@ Car.init(
       primaryKey: true,
     },
     name: { type: DataTypes.STRING(160), allowNull: false },
+    slug: {
+      type: DataTypes.STRING(180),
+      allowNull: true,
+      unique: true,
+    },
     brand: { type: DataTypes.STRING(80), allowNull: false },
     model: { type: DataTypes.STRING(120), allowNull: false },
     year: { type: DataTypes.INTEGER.UNSIGNED, allowNull: false },
@@ -62,6 +67,7 @@ Car.init(
     modelName: 'Car',
     tableName: 'cars',
     indexes: [
+      { name: 'idx_cars_slug', unique: true, fields: ['slug'] },
       { name: 'idx_cars_active_type_price', fields: ['is_active', 'type', 'price'] },
       { name: 'idx_cars_active_featured_price', fields: ['is_active', 'featured', 'price'] },
       { name: 'idx_cars_brand_prefix', fields: ['brand'] },

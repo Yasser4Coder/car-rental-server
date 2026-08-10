@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { env } from '../config/env.js';
 import { Booking, Car, User } from '../models/index.js';
+import { buildCarSlugBase } from '../utils/carSlug.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const fleetPath = path.join(__dirname, 'fleetFromPdf.json');
@@ -60,10 +61,25 @@ export async function seedDatabase(options = {}) {
     }
   }
 
-  const rows = fleet.map(({ driveFolder, pdfId, ...car }) => ({
-    ...car,
-    isActive: true,
-  }));
+  const rows = [];
+  const usedSlugs = new Set(
+    (await Car.findAll({ attributes: ['slug'], raw: true }))
+      .map((row) => row.slug)
+      .filter(Boolean),
+  );
+
+  for (const item of fleet) {
+    const { driveFolder, pdfId, ...car } = item;
+    const base = buildCarSlugBase(car) || 'car';
+    let slug = base;
+    let n = 2;
+    while (usedSlugs.has(slug)) {
+      slug = `${base}-${n}`;
+      n += 1;
+    }
+    usedSlugs.add(slug);
+    rows.push({ ...car, slug, isActive: true });
+  }
 
   await Car.bulkCreate(rows);
   console.log(`[seed] Seeded ${rows.length} cars · admin ${env.admin.email}`);

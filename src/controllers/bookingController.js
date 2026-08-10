@@ -177,7 +177,7 @@ export const adminListBookings = asyncHandler(async (req, res) => {
       {
         model: Car,
         as: 'car',
-        attributes: ['id', 'name', 'brand', 'model', 'image', 'type', 'price'],
+        attributes: ['id', 'name', 'slug', 'brand', 'model', 'image', 'type', 'price'],
       },
       { model: User, as: 'user', attributes: ['id', 'fullName', 'email', 'phone'] },
     ],

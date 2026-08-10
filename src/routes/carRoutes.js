@@ -7,6 +7,6 @@ const router = Router();
 
 router.get('/featured', carController.getFeaturedCars);
 router.get('/', validate(carFilterSchema, 'query'), carController.getCars);
-router.get('/:id', carController.getCarById);
+router.get('/:slugOrId', carController.getCarBySlug);
 
 export default router;

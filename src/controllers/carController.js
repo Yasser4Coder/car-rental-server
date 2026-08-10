@@ -10,6 +10,7 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 import { processAndSaveCarImage, removeCarMediaFiles, safeUnlinkUpload } from '../middleware/upload.js';
 import { invalidateCache } from '../utils/cache.js';
 import { resolveMediaUrl, withCarMedia, withCarsMedia } from '../utils/media.js';
+import { ensureUniqueCarSlug } from '../utils/carSlug.js';
 
 const PENDING_IMAGE = '/uploads/fleet/pending.svg';
 
@@ -51,10 +52,21 @@ export const getFeaturedCars = asyncHandler(async (req, res) => {
   res.json(result);
 });
 
-export const getCarById = asyncHandler(async (req, res) => {
-  const car = await Car.findOne({
-    where: { id: req.params.id, isActive: true },
+export const getCarBySlug = asyncHandler(async (req, res) => {
+  const key = String(req.params.slugOrId || '').trim();
+  if (!key) throw new AppError('Car not found', 404);
+
+  let car = await Car.findOne({
+    where: { slug: key, isActive: true },
   });
+
+  // Legacy numeric URLs still resolve, then clients should use the returned slug
+  if (!car && /^\d+$/.test(key)) {
+    car = await Car.findOne({
+      where: { id: Number(key), isActive: true },
+    });
+  }
+
   if (!car) throw new AppError('Car not found', 404);
 
   const related = await Car.findAll({
@@ -86,7 +98,9 @@ export const adminGetCar = asyncHandler(async (req, res) => {
 });
 
 export const adminCreateCar = asyncHandler(async (req, res) => {
-  const car = await Car.create(req.body);
+  const payload = { ...req.body };
+  payload.slug = await ensureUniqueCarSlug(payload);
+  const car = await Car.create(payload);
   bustCarCaches();
   res.status(201).json({ data: withCarMedia(car) });
 });
@@ -94,7 +108,22 @@ export const adminCreateCar = asyncHandler(async (req, res) => {
 export const adminUpdateCar = asyncHandler(async (req, res) => {
   const car = await Car.findByPk(req.params.id);
   if (!car) throw new AppError('Car not found', 404);
-  await car.update(req.body);
+
+  const payload = { ...req.body };
+  if (payload.name != null || payload.slug != null || payload.brand != null || payload.model != null) {
+    payload.slug = await ensureUniqueCarSlug(
+      {
+        name: payload.name ?? car.name,
+        brand: payload.brand ?? car.brand,
+        model: payload.model ?? car.model,
+        year: payload.year ?? car.year,
+        slug: payload.slug ?? car.slug,
+      },
+      car.id,
+    );
+  }
+
+  await car.update(payload);
   bustCarCaches();
   res.json({ data: withCarMedia(car) });
 });
