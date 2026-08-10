@@ -3,7 +3,15 @@ import { Booking, Car, User } from '../models/index.js';
 import { appendStatusHistory, assertStatusTransition } from '../services/bookingStatus.js';
 import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
+import { withCarMedia } from '../utils/media.js';
 import { createBookingCode, rentalDays } from '../utils/tokens.js';
+
+function withBookingMedia(booking) {
+  if (!booking) return booking;
+  const data = typeof booking.toJSON === 'function' ? booking.toJSON() : { ...booking };
+  if (data.car) data.car = withCarMedia(data.car);
+  return data;
+}
 
 export const createBooking = asyncHandler(async (req, res) => {
   const payload = req.body;
@@ -62,7 +70,7 @@ export const createBooking = asyncHandler(async (req, res) => {
     include: [{ model: Car, as: 'car' }],
   });
 
-  res.status(201).json({ data: full });
+  res.status(201).json({ data: withBookingMedia(full) });
 });
 
 export const getMyBookings = asyncHandler(async (req, res) => {
@@ -73,7 +81,7 @@ export const getMyBookings = asyncHandler(async (req, res) => {
     include: [{ model: Car, as: 'car' }],
     order: [['createdAt', 'DESC']],
   });
-  res.json({ data: bookings });
+  res.json({ data: bookings.map(withBookingMedia) });
 });
 
 export const cancelMyBooking = asyncHandler(async (req, res) => {
@@ -180,7 +188,7 @@ export const adminListBookings = asyncHandler(async (req, res) => {
   });
 
   res.json({
-    data: rows,
+    data: rows.map(withBookingMedia),
     meta: { total: count, page, limit, totalPages: Math.ceil(count / limit) || 1 },
   });
 });
@@ -193,7 +201,7 @@ export const adminGetBooking = asyncHandler(async (req, res) => {
     ],
   });
   if (!booking) throw new AppError('Booking not found', 404);
-  res.json({ data: booking });
+  res.json({ data: withBookingMedia(booking) });
 });
 
 export const adminUpdateStatus = asyncHandler(async (req, res) => {

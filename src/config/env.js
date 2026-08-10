@@ -31,6 +31,8 @@ export const env = {
   },
   clientUrl: process.env.CLIENT_URL || 'http://localhost:5173',
   adminUrl: process.env.ADMIN_URL || 'http://localhost:5174',
+  /** Public API origin for absolute /uploads URLs in production */
+  publicUrl: (process.env.PUBLIC_URL || process.env.API_PUBLIC_URL || '').replace(/\/$/, ''),
   admin: {
     email: process.env.ADMIN_EMAIL || 'admin@greenrental.ae',
     password: process.env.ADMIN_PASSWORD || 'Admin123!@#',

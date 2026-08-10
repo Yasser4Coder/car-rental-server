@@ -121,6 +121,16 @@ Default admin login (from `.env`):
 
 Uploads are served from `/uploads`.
 
+### Production photos
+
+Car images are stored as `/uploads/fleet/...` in the DB. In production:
+
+1. Set `PUBLIC_URL=https://api.greenrentalexperience.com` on the API
+2. Set client/admin `VITE_API_URL=https://api.greenrentalexperience.com/api` at build time
+3. Upload the `server/uploads/` folder to the API host (it is gitignored), **or** run `npm run fleet:import` on the server once
+
+Without the files on disk, absolute URLs will still 404.
+
 ## Notes
 
 - Stripe is not implemented; bookings include nullable `paymentStatus` / `stripePaymentIntentId` for later.

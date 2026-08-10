@@ -2,6 +2,7 @@ import { Op, literal } from 'sequelize';
 import sequelize from '../config/database.js';
 import { Car } from '../models/index.js';
 import { getCached, setCached, CACHE_TTL } from '../utils/cache.js';
+import { withCarMedia, withCarsMedia } from '../utils/media.js';
 
 /** Lean columns for fleet cards / filters (avoid SELECT *). */
 export const CAR_LIST_ATTRIBUTES = [
@@ -233,7 +234,7 @@ export async function listCars(filters = {}) {
   }
 
   const result = {
-    data: rows,
+    data: withCarsMedia(rows),
     meta: {
       total: count,
       page: safePage,

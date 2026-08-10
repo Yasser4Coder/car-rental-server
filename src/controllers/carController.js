@@ -9,6 +9,7 @@ import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { publicUploadPath } from '../middleware/upload.js';
 import { invalidateCache } from '../utils/cache.js';
+import { resolveMediaUrl, withCarMedia, withCarsMedia } from '../utils/media.js';
 
 function bustCarCaches() {
   invalidateCache('cars:');
@@ -50,7 +51,7 @@ export const getCarById = asyncHandler(async (req, res) => {
     limit: 3,
   });
 
-  res.json({ data: car, related });
+  res.json({ data: withCarMedia(car), related: withCarsMedia(related) });
 });
 
 export const adminListCars = asyncHandler(async (req, res) => {
@@ -65,13 +66,13 @@ export const adminListCars = asyncHandler(async (req, res) => {
 export const adminGetCar = asyncHandler(async (req, res) => {
   const car = await Car.findByPk(req.params.id);
   if (!car) throw new AppError('Car not found', 404);
-  res.json({ data: car });
+  res.json({ data: withCarMedia(car) });
 });
 
 export const adminCreateCar = asyncHandler(async (req, res) => {
   const car = await Car.create(req.body);
   bustCarCaches();
-  res.status(201).json({ data: car });
+  res.status(201).json({ data: withCarMedia(car) });
 });
 
 export const adminUpdateCar = asyncHandler(async (req, res) => {
@@ -79,7 +80,7 @@ export const adminUpdateCar = asyncHandler(async (req, res) => {
   if (!car) throw new AppError('Car not found', 404);
   await car.update(req.body);
   bustCarCaches();
-  res.json({ data: car });
+  res.json({ data: withCarMedia(car) });
 });
 
 export const adminDeleteCar = asyncHandler(async (req, res) => {
@@ -90,7 +91,7 @@ export const adminDeleteCar = asyncHandler(async (req, res) => {
   if (bookingCount > 0) {
     await car.update({ isActive: false });
     bustCarCaches();
-    return res.json({ data: car, message: 'Car deactivated (has bookings)' });
+    return res.json({ data: withCarMedia(car), message: 'Car deactivated (has bookings)' });
   }
 
   await car.destroy();
@@ -114,5 +115,5 @@ export const adminUploadImages = asyncHandler(async (req, res) => {
   });
   bustCarCaches();
 
-  res.json({ data: car, uploaded: urls });
+  res.json({ data: withCarMedia(car), uploaded: urls.map(resolveMediaUrl) });
 });
