@@ -1,5 +1,44 @@
 import { Op } from 'sequelize';
+import sequelize from '../config/database.js';
 import { Car } from '../models/index.js';
+
+/**
+ * sequelize.sync() does NOT add columns to existing tables.
+ * Production DBs created before `slug` need an explicit ALTER.
+ */
+export async function ensureCarSlugColumn() {
+  const [cols] = await sequelize.query(
+    `SELECT COLUMN_NAME
+     FROM INFORMATION_SCHEMA.COLUMNS
+     WHERE TABLE_SCHEMA = DATABASE()
+       AND TABLE_NAME = 'cars'
+       AND COLUMN_NAME = 'slug'
+     LIMIT 1`,
+  );
+
+  if (cols?.length) {
+    console.log('[schema] cars.slug already present');
+    return false;
+  }
+
+  console.log('[schema] Adding cars.slug column…');
+  await sequelize.query(
+    `ALTER TABLE \`cars\` ADD COLUMN \`slug\` VARCHAR(180) NULL DEFAULT NULL`,
+  );
+
+  // Unique index (ignore if another unique already exists)
+  try {
+    await sequelize.query(
+      `CREATE UNIQUE INDEX \`idx_cars_slug\` ON \`cars\` (\`slug\`)`,
+    );
+  } catch (err) {
+    const msg = String(err?.original?.message || err?.message || '');
+    if (!/Duplicate|exists/i.test(msg)) throw err;
+  }
+
+  console.log('[schema] cars.slug column added');
+  return true;
+}
 
 /** Turn a car name into a URL-safe slug: "Audi A3 S-Line" → "audi-a3-s-line" */
 export function slugify(input) {

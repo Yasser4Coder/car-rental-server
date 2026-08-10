@@ -224,9 +224,16 @@ export async function listCars(filters = {}) {
   try {
     ({ rows, count } = await Car.findAndCountAll(queryOpts));
   } catch (err) {
-    // FULLTEXT index missing → fall back to prefix LIKE
     const msg = String(err?.original?.message || err?.message || '');
-    if (q?.trim() && /FULLTEXT|MATCH/i.test(msg)) {
+
+    // Production DBs created before slug: sync() never ALTERs — heal then retry once
+    if (/Unknown column .*slug/i.test(msg)) {
+      const { ensureCarSlugColumn, backfillCarSlugs } = await import('../utils/carSlug.js');
+      await ensureCarSlugColumn();
+      await backfillCarSlugs().catch(() => {});
+      ({ rows, count } = await Car.findAndCountAll(queryOpts));
+    } else if (q?.trim() && /FULLTEXT|MATCH/i.test(msg)) {
+      // FULLTEXT index missing → fall back to prefix LIKE
       const prefix = `${escapeLike(q.trim())}%`;
       const fallbackWhere = { ...where };
       const fallbackAnd = (fallbackWhere[Op.and] || []).filter(

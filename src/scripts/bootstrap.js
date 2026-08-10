@@ -6,7 +6,7 @@ import { AppBootstrap, Car, sequelize } from '../models/index.js';
 import { ensureSearchIndexes } from './ensureSearchIndexes.js';
 import { ensureFleetAssets, getUploadsRoot } from './ensureFleetAssets.js';
 import { fleetPath, seedDatabase } from '../seeders/seed.js';
-import { backfillCarSlugs } from '../utils/carSlug.js';
+import { backfillCarSlugs, ensureCarSlugColumn } from '../utils/carSlug.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const importScript = path.join(__dirname, '../seeders/importFleetFromPdf.py');
@@ -131,6 +131,14 @@ export async function runBootstrap() {
 
   await sequelize.sync();
   console.log(`[bootstrap] uploads dir: ${getUploadsRoot()}`);
+
+  // Must run every boot: sync() won't add new columns on existing Hostinger tables
+  try {
+    await ensureCarSlugColumn();
+  } catch (err) {
+    console.error(`[bootstrap] ensureCarSlugColumn failed: ${err.message}`);
+    throw err;
+  }
 
   if (force) {
     console.log('[bootstrap] FORCE_BOOTSTRAP=1 — clearing bootstrap flags');
