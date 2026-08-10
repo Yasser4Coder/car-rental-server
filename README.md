@@ -121,16 +121,19 @@ Default admin login (from `.env`):
 
 Uploads are served from `/uploads`.
 
-### Production photos
+### Production photos (Hostinger)
 
-Car images are stored under `uploads/fleet/`. In production:
+Hostinger deploys into a new `hbuilds/versions/...` folder every time, so photos
+downloaded at runtime are wiped on the next deploy.
 
-1. Set `PUBLIC_URL=https://api.greenrentalexperience.com` on the API
-2. Set client/admin `VITE_API_URL=https://api.greenrentalexperience.com/api` at build time
-3. On API start, missing photos are auto-downloaded from Google Drive (`ensureFleetAssets`)
-4. Images are served at `/uploads/...` and `/api/uploads/...` (use the `/api` path if the host only proxies `/api`)
+**Solution:** fleet images live in git under `uploads/fleet/` (~28MB) and ship with each deploy.
 
-Manual restore: `npm run fleet:assets`
+Checklist:
+1. `PUBLIC_URL=https://api.greenrentalexperience.com` in API env
+2. Client/admin build with `VITE_API_URL=https://api.greenrentalexperience.com/api`
+3. Push server repo (including `uploads/fleet`) and redeploy
+4. Check `GET /api/health` → `fleetFolders` should be > 0
+5. Open `https://api.greenrentalexperience.com/api/uploads/fleet/pdf-11/0.jpeg`
 
 ## Notes
 
