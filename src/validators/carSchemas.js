@@ -20,7 +20,8 @@ export const carFilterSchema = z.object({
   date: isoDate,
   returnDate: isoDate,
   page: z.coerce.number().int().min(1).optional().default(1),
-  limit: z.coerce.number().int().min(1).max(50).optional().default(12),
+  // Admin fleet list needs room for the full catalog (~55+); public pages stay at ≤12 via client
+  limit: z.coerce.number().int().min(1).max(100).optional().default(12),
   featured: z
     .union([z.literal('true'), z.literal('false'), z.boolean()])
     .optional()
