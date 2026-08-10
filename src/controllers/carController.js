@@ -7,13 +7,29 @@ import {
 } from '../services/carFilter.js';
 import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
-import { publicUploadPath } from '../middleware/upload.js';
+import { processAndSaveCarImage, safeUnlinkUpload } from '../middleware/upload.js';
 import { invalidateCache } from '../utils/cache.js';
 import { resolveMediaUrl, withCarMedia, withCarsMedia } from '../utils/media.js';
+
+const PENDING_IMAGE = '/uploads/fleet/pending.svg';
 
 function bustCarCaches() {
   invalidateCache('cars:');
   invalidateCache('featured:');
+}
+
+function toStoragePath(src) {
+  if (!src || typeof src !== 'string') return '';
+  if (src.startsWith('/uploads/')) return src;
+  try {
+    const pathName = src.startsWith('http') ? new URL(src).pathname : src;
+    if (pathName.startsWith('/api/uploads/')) return pathName.slice(4);
+    if (pathName.startsWith('/uploads/')) return pathName;
+  } catch {
+    /* ignore */
+  }
+  const match = src.match(/\/uploads\/.+$/);
+  return match ? match[0] : src;
 }
 
 export const getCars = asyncHandler(async (req, res) => {
@@ -106,14 +122,75 @@ export const adminUploadImages = asyncHandler(async (req, res) => {
   const files = req.files || [];
   if (!files.length) throw new AppError('No images uploaded', 400);
 
-  const urls = files.map((file) => publicUploadPath(file.filename));
-  const gallery = Array.isArray(car.gallery) ? [...car.gallery, ...urls] : [...urls];
+  const saved = [];
+  const errors = [];
+
+  for (const file of files) {
+    try {
+      const result = await processAndSaveCarImage(file.buffer, car.id);
+      saved.push(result);
+    } catch (err) {
+      errors.push(err.message || 'Failed to process image');
+    }
+  }
+
+  if (!saved.length) {
+    throw new AppError(errors[0] || 'No images could be processed', 400);
+  }
+
+  const urls = saved.map((item) => item.publicPath);
+  const existingGallery = Array.isArray(car.gallery) ? car.gallery.map(toStoragePath) : [];
+  const gallery = [...existingGallery, ...urls];
+  const currentImage = toStoragePath(car.image);
+  const shouldReplaceMain = !currentImage || currentImage === PENDING_IMAGE;
 
   await car.update({
-    image: car.image || urls[0],
+    image: shouldReplaceMain ? urls[0] : currentImage,
     gallery,
   });
   bustCarCaches();
 
-  res.json({ data: withCarMedia(car), uploaded: urls.map(resolveMediaUrl) });
+  const refreshed = await Car.findByPk(car.id);
+  res.status(201).json({
+    data: withCarMedia(refreshed),
+    uploaded: urls.map(resolveMediaUrl),
+    compressed: saved.map((item) => ({
+      path: item.publicPath,
+      bytes: item.bytes,
+    })),
+    ...(errors.length ? { warnings: errors } : {}),
+    message: `${saved.length} photo${saved.length === 1 ? '' : 's'} uploaded and compressed`,
+  });
+});
+
+export const adminDeleteImage = asyncHandler(async (req, res) => {
+  const car = await Car.findByPk(req.params.id);
+  if (!car) throw new AppError('Car not found', 404);
+
+  const target = toStoragePath(req.body?.path || req.query?.path);
+  if (!target || !target.startsWith('/uploads/')) {
+    throw new AppError('Image path is required', 400);
+  }
+
+  const gallery = (Array.isArray(car.gallery) ? car.gallery : []).map(toStoragePath).filter(Boolean);
+  const nextGallery = gallery.filter((p) => p !== target);
+  if (nextGallery.length === gallery.length && toStoragePath(car.image) !== target) {
+    throw new AppError('Image not found on this car', 404);
+  }
+
+  await safeUnlinkUpload(target);
+
+  let nextImage = toStoragePath(car.image);
+  if (nextImage === target) {
+    nextImage = nextGallery[0] || PENDING_IMAGE;
+  }
+
+  await car.update({
+    image: nextImage,
+    gallery: nextGallery,
+  });
+  bustCarCaches();
+
+  const refreshed = await Car.findByPk(car.id);
+  res.json({ data: withCarMedia(refreshed), message: 'Photo removed' });
 });

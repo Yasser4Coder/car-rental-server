@@ -1,3 +1,4 @@
+import multer from 'multer';
 import { ZodError } from 'zod';
 import { AppError } from '../utils/AppError.js';
 
@@ -19,6 +20,17 @@ export function errorHandler(err, req, res, next) {
     return res.status(err.statusCode).json({
       message: err.message,
       ...(err.details ? { details: err.details } : {}),
+    });
+  }
+
+  if (err instanceof multer.MulterError) {
+    const messages = {
+      LIMIT_FILE_SIZE: 'Each photo must be 10MB or smaller',
+      LIMIT_FILE_COUNT: 'You can upload at most 8 photos at once',
+      LIMIT_UNEXPECTED_FILE: 'Unexpected upload field',
+    };
+    return res.status(400).json({
+      message: messages[err.code] || `Upload error: ${err.message}`,
     });
   }
 
