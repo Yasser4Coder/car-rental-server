@@ -58,16 +58,10 @@ function runPythonImport() {
   });
 }
 
-async function bootstrapFleetImport() {
-  // Always restore missing photos from Drive (Node) — works without Python on Hostinger
-  try {
-    await ensureFleetAssets();
-  } catch (err) {
-    console.warn(`[bootstrap] ensureFleetAssets: ${err.message}`);
-  }
-
+/** Fast: only mark flags / skip python. Never downloads photos. */
+async function bootstrapFleetImportMeta() {
   if (await hasRun(STEPS.fleetImport)) {
-    console.log('[bootstrap] fleet:import flag already set — skip python import');
+    console.log('[bootstrap] fleet:import flag already set — skip');
     return;
   }
 
@@ -77,13 +71,13 @@ async function bootstrapFleetImport() {
     return;
   }
 
+  // Optional python import only if JSON missing (can be slow — only first deploy)
   console.log('[bootstrap] Running fleet:import (first time)…');
   try {
     await runPythonImport();
     if (!fs.existsSync(fleetPath)) {
       throw new Error('fleet:import finished but fleetFromPdf.json was not created');
     }
-    await ensureFleetAssets();
     await markRun(STEPS.fleetImport, 'python import');
     console.log('[bootstrap] fleet:import complete');
   } catch (err) {
@@ -117,7 +111,7 @@ async function bootstrapSeed() {
   }
 
   if (!fs.existsSync(fleetPath)) {
-    console.warn('[bootstrap] seed deferred — fleetFromPdf.json missing (run fleet:import)');
+    console.warn('[bootstrap] seed deferred — fleetFromPdf.json missing');
     return;
   }
 
@@ -128,8 +122,8 @@ async function bootstrapSeed() {
 }
 
 /**
- * One-time startup tasks: indexes → fleet import/assets → seed.
- * Photo restore runs every boot if files are missing on disk.
+ * Fast startup work only (must finish before Hostinger's ~3s listen deadline).
+ * Photo downloads happen later via runBackgroundJobs().
  */
 export async function runBootstrap() {
   const force = process.env.FORCE_BOOTSTRAP === '1' || process.env.FORCE_BOOTSTRAP === 'true';
@@ -143,6 +137,19 @@ export async function runBootstrap() {
   }
 
   await bootstrapIndexes();
-  await bootstrapFleetImport();
+  await bootstrapFleetImportMeta();
   await bootstrapSeed();
+}
+
+/** Slow jobs after listen() — restore missing Drive photos. */
+export function runBackgroundJobs() {
+  ensureFleetAssets()
+    .then((result) => {
+      if (result?.downloaded) {
+        console.log(`[bootstrap] background fleet-assets downloaded ${result.downloaded}`);
+      }
+    })
+    .catch((err) => {
+      console.warn(`[bootstrap] background fleet-assets failed: ${err.message}`);
+    });
 }
