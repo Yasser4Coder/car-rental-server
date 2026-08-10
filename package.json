@@ -11,6 +11,7 @@
     "db:seed:force": "node src/seeders/seedCli.js --force",
     "db:indexes": "node src/scripts/runEnsureIndexes.js",
     "fleet:import": "python src/seeders/importFleetFromPdf.py",
+    "fleet:assets": "node src/scripts/runEnsureFleetAssets.js",
     "bootstrap:reset": "node src/scripts/resetBootstrap.js"
   },
   "dependencies": {

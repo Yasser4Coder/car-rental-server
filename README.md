@@ -123,13 +123,14 @@ Uploads are served from `/uploads`.
 
 ### Production photos
 
-Car images are stored as `/uploads/fleet/...` in the DB. In production:
+Car images are stored under `uploads/fleet/`. In production:
 
 1. Set `PUBLIC_URL=https://api.greenrentalexperience.com` on the API
 2. Set client/admin `VITE_API_URL=https://api.greenrentalexperience.com/api` at build time
-3. Upload the `server/uploads/` folder to the API host (it is gitignored), **or** run `npm run fleet:import` on the server once
+3. On API start, missing photos are auto-downloaded from Google Drive (`ensureFleetAssets`)
+4. Images are served at `/uploads/...` and `/api/uploads/...` (use the `/api` path if the host only proxies `/api`)
 
-Without the files on disk, absolute URLs will still 404.
+Manual restore: `npm run fleet:assets`
 
 ## Notes
 

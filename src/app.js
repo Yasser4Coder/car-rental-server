@@ -1,5 +1,3 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express from 'express';
@@ -11,8 +9,9 @@ import authRoutes from './routes/authRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
 import carRoutes from './routes/carRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import { getUploadsRoot } from './utils/paths.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const uploadsPath = getUploadsRoot();
 
 const app = express();
 
@@ -26,10 +25,18 @@ app.use(
 );
 app.use(express.json({ limit: '2mb' }));
 app.use(cookieParser());
-app.use('/uploads', express.static(path.resolve(__dirname, '../', env.uploadDir)));
+
+// Serve fleet photos at both paths (Hostinger often only proxies /api/* to Node)
+const staticOpts = { fallthrough: true, maxAge: '7d', index: false };
+app.use('/uploads', express.static(uploadsPath, staticOpts));
+app.use('/api/uploads', express.static(uploadsPath, staticOpts));
 
 app.get('/api/health', (_req, res) => {
-  res.json({ ok: true, service: 'car-rental-api' });
+  res.json({
+    ok: true,
+    service: 'car-rental-api',
+    uploadsPath,
+  });
 });
 
 app.use('/api/auth', authRoutes);

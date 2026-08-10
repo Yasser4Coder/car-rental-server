@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { AppBootstrap, Car, sequelize } from '../models/index.js';
 import { ensureSearchIndexes } from './ensureSearchIndexes.js';
+import { ensureFleetAssets, getUploadsRoot } from './ensureFleetAssets.js';
 import { fleetPath, seedDatabase } from '../seeders/seed.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -48,7 +49,7 @@ function runPythonImport() {
       child.on('error', () => tryNext());
       child.on('exit', (code) => {
         if (code === 0) resolve();
-        else if (code === 9009 || code === 127) tryNext(); // command not found
+        else if (code === 9009 || code === 127) tryNext();
         else reject(new Error(`fleet:import exited with code ${code}`));
       });
     };
@@ -58,8 +59,15 @@ function runPythonImport() {
 }
 
 async function bootstrapFleetImport() {
+  // Always restore missing photos from Drive (Node) — works without Python on Hostinger
+  try {
+    await ensureFleetAssets();
+  } catch (err) {
+    console.warn(`[bootstrap] ensureFleetAssets: ${err.message}`);
+  }
+
   if (await hasRun(STEPS.fleetImport)) {
-    console.log('[bootstrap] fleet:import already done — skip');
+    console.log('[bootstrap] fleet:import flag already set — skip python import');
     return;
   }
 
@@ -75,11 +83,11 @@ async function bootstrapFleetImport() {
     if (!fs.existsSync(fleetPath)) {
       throw new Error('fleet:import finished but fleetFromPdf.json was not created');
     }
+    await ensureFleetAssets();
     await markRun(STEPS.fleetImport, 'python import');
     console.log('[bootstrap] fleet:import complete');
   } catch (err) {
     console.warn(`[bootstrap] fleet:import skipped: ${err.message}`);
-    // Do not mark complete — will retry next start
   }
 }
 
@@ -102,9 +110,8 @@ async function bootstrapSeed() {
 
   const carCount = await Car.count();
   if (carCount > 0 && fs.existsSync(fleetPath)) {
-    // DB already has cars from a previous manual seed — don't wipe, just mark
     console.log(`[bootstrap] ${carCount} cars already in DB — mark seed done`);
-    await seedDatabase({ forceCars: false }); // upserts admin only
+    await seedDatabase({ forceCars: false });
     await markRun(STEPS.seed, 'existing cars');
     return;
   }
@@ -121,13 +128,14 @@ async function bootstrapSeed() {
 }
 
 /**
- * One-time startup tasks: indexes → fleet import → seed.
- * Tracked in `app_bootstrap` so they never re-run unless FORCE_BOOTSTRAP=1.
+ * One-time startup tasks: indexes → fleet import/assets → seed.
+ * Photo restore runs every boot if files are missing on disk.
  */
 export async function runBootstrap() {
   const force = process.env.FORCE_BOOTSTRAP === '1' || process.env.FORCE_BOOTSTRAP === 'true';
 
   await sequelize.sync();
+  console.log(`[bootstrap] uploads dir: ${getUploadsRoot()}`);
 
   if (force) {
     console.log('[bootstrap] FORCE_BOOTSTRAP=1 — clearing bootstrap flags');

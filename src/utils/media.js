@@ -6,8 +6,13 @@ export function resolveMediaUrl(src) {
   if (!src || typeof src !== 'string') return src;
   if (/^https?:\/\//i.test(src) || src.startsWith('data:')) return src;
   const base = String(env.publicUrl || '').replace(/\/$/, '');
-  if (!base) return src;
-  return src.startsWith('/') ? `${base}${src}` : `${base}/${src}`;
+  let path = src.startsWith('/') ? src : `/${src}`;
+  // Hostinger / reverse proxies often only forward /api/* to Node
+  if (base && path.startsWith('/uploads/')) {
+    path = `/api${path}`;
+  }
+  if (!base) return path;
+  return `${base}${path}`;
 }
 
 export function withCarMedia(car) {
