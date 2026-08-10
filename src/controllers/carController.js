@@ -7,7 +7,7 @@ import {
 } from '../services/carFilter.js';
 import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
-import { processAndSaveCarImage, safeUnlinkUpload } from '../middleware/upload.js';
+import { processAndSaveCarImage, removeCarMediaFiles, safeUnlinkUpload } from '../middleware/upload.js';
 import { invalidateCache } from '../utils/cache.js';
 import { resolveMediaUrl, withCarMedia, withCarsMedia } from '../utils/media.js';
 
@@ -110,9 +110,17 @@ export const adminDeleteCar = asyncHandler(async (req, res) => {
     return res.json({ data: withCarMedia(car), message: 'Car deactivated (has bookings)' });
   }
 
+  // Hard delete: remove DB row and wipe photos from disk
+  const snapshot = car.toJSON();
   await car.destroy();
+  const { removed } = await removeCarMediaFiles(snapshot);
   bustCarCaches();
-  res.json({ message: 'Car deleted' });
+  res.json({
+    message: removed
+      ? `Car deleted and ${removed} photo${removed === 1 ? '' : 's'} removed from server`
+      : 'Car deleted',
+    removedPhotos: removed,
+  });
 });
 
 export const adminUploadImages = asyncHandler(async (req, res) => {
@@ -171,6 +179,9 @@ export const adminDeleteImage = asyncHandler(async (req, res) => {
   if (!target || !target.startsWith('/uploads/')) {
     throw new AppError('Image path is required', 400);
   }
+  if (target === PENDING_IMAGE) {
+    throw new AppError('Cannot remove the placeholder image', 400);
+  }
 
   const gallery = (Array.isArray(car.gallery) ? car.gallery : []).map(toStoragePath).filter(Boolean);
   const nextGallery = gallery.filter((p) => p !== target);
@@ -178,7 +189,7 @@ export const adminDeleteImage = asyncHandler(async (req, res) => {
     throw new AppError('Image not found on this car', 404);
   }
 
-  await safeUnlinkUpload(target);
+  const deletedFromDisk = await safeUnlinkUpload(target);
 
   let nextImage = toStoragePath(car.image);
   if (nextImage === target) {
@@ -192,5 +203,11 @@ export const adminDeleteImage = asyncHandler(async (req, res) => {
   bustCarCaches();
 
   const refreshed = await Car.findByPk(car.id);
-  res.json({ data: withCarMedia(refreshed), message: 'Photo removed' });
+  res.json({
+    data: withCarMedia(refreshed),
+    message: deletedFromDisk
+      ? 'Photo removed from car and deleted from server'
+      : 'Photo removed from car',
+    deletedFromDisk,
+  });
 });

@@ -128,19 +128,88 @@ export function publicUploadPath(filename) {
   return `/uploads/${filename}`;
 }
 
-/** Safely delete a file if it lives under uploads/cars/ */
-export async function safeUnlinkUpload(publicPath) {
-  if (!publicPath || typeof publicPath !== 'string') return;
-  if (!publicPath.startsWith('/uploads/cars/')) return;
+const PROTECTED_PATHS = new Set(['/uploads/fleet/pending.svg']);
 
-  const uploadsRoot = getUploadsRoot();
-  const relative = publicPath.replace(/^\/uploads\/?/, '');
-  const absolute = path.resolve(uploadsRoot, relative);
-  if (!absolute.startsWith(path.resolve(uploadsRoot, 'cars'))) return;
+function normalizePublicUploadPath(publicPath) {
+  if (!publicPath || typeof publicPath !== 'string') return '';
+  if (publicPath.startsWith('/uploads/')) return publicPath.split('?')[0];
+  try {
+    const pathName = publicPath.startsWith('http') ? new URL(publicPath).pathname : publicPath;
+    if (pathName.startsWith('/api/uploads/')) return pathName.slice(4).split('?')[0];
+    if (pathName.startsWith('/uploads/')) return pathName.split('?')[0];
+  } catch {
+    /* ignore */
+  }
+  const match = publicPath.match(/\/uploads\/[^?\s]+/);
+  return match ? match[0] : '';
+}
+
+function isPathInside(parent, child) {
+  const relative = path.relative(parent, child);
+  return Boolean(relative) && !relative.startsWith('..') && !path.isAbsolute(relative);
+}
+
+/**
+ * Delete an uploaded image from disk.
+ * Allows /uploads/cars/* and /uploads/fleet/* (not the shared pending placeholder).
+ */
+export async function safeUnlinkUpload(publicPath) {
+  const normalized = normalizePublicUploadPath(publicPath);
+  if (!normalized) return false;
+  if (PROTECTED_PATHS.has(normalized)) return false;
+  if (
+    !normalized.startsWith('/uploads/cars/') &&
+    !normalized.startsWith('/uploads/fleet/')
+  ) {
+    return false;
+  }
+
+  const uploadsRoot = path.resolve(getUploadsRoot());
+  const absolute = path.resolve(uploadsRoot, normalized.replace(/^\/uploads\/?/, ''));
+  if (!isPathInside(uploadsRoot, absolute)) return false;
 
   try {
+    const stat = await fs.stat(absolute);
+    if (!stat.isFile()) return false;
     await fs.unlink(absolute);
+    return true;
   } catch {
-    // ignore missing files
+    return false;
   }
+}
+
+/** Remove every media file for a car, then delete uploads/cars/{id} if present. */
+export async function removeCarMediaFiles(car) {
+  if (!car) return { removed: 0 };
+
+  const paths = new Set();
+  const image = normalizePublicUploadPath(car.image);
+  if (image) paths.add(image);
+
+  const gallery = Array.isArray(car.gallery) ? car.gallery : [];
+  for (const item of gallery) {
+    const p = normalizePublicUploadPath(item);
+    if (p) paths.add(p);
+  }
+
+  let removed = 0;
+  for (const p of paths) {
+    if (await safeUnlinkUpload(p)) removed += 1;
+  }
+
+  // Wipe the car-specific upload folder (admin-uploaded compressed photos)
+  const id = String(car.id ?? '');
+  if (/^\d+$/.test(id)) {
+    const carDir = path.resolve(getUploadsRoot(), 'cars', id);
+    const carsRoot = path.resolve(getUploadsRoot(), 'cars');
+    if (carDir === path.join(carsRoot, id) || isPathInside(carsRoot, carDir)) {
+      try {
+        await fs.rm(carDir, { recursive: true, force: true });
+      } catch {
+        // ignore
+      }
+    }
+  }
+
+  return { removed };
 }
