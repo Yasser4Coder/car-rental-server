@@ -7,13 +7,18 @@ const badgeSchema = z.object({
   className: z.string().optional(),
 });
 
+const isoDate = z
+  .string()
+  .regex(/^\d{4}-\d{2}-\d{2}$/, 'Expected YYYY-MM-DD')
+  .optional();
+
 export const carFilterSchema = z.object({
   location: z.string().optional(),
   type: z.union([carType, z.literal('any')]).optional(),
   q: z.string().optional(),
   sort: z.enum(['featured', 'price-asc', 'price-desc', 'name']).optional(),
-  date: z.string().optional(),
-  returnDate: z.string().optional(),
+  date: isoDate,
+  returnDate: isoDate,
   page: z.coerce.number().int().min(1).optional().default(1),
   limit: z.coerce.number().int().min(1).max(50).optional().default(12),
   featured: z

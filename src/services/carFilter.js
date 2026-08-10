@@ -1,8 +1,11 @@
 import { Op, literal } from 'sequelize';
 import sequelize from '../config/database.js';
-import { Car } from '../models/index.js';
+import { Booking, Car } from '../models/index.js';
 import { getCached, setCached, CACHE_TTL } from '../utils/cache.js';
 import { withCarMedia, withCarsMedia } from '../utils/media.js';
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const BUSY_STATUSES = ['pending', 'confirmed', 'active'];
 
 /** Lean columns for fleet cards / filters (avoid SELECT *). */
 export const CAR_LIST_ATTRIBUTES = [
@@ -175,22 +178,30 @@ export async function listCars(filters = {}) {
   }
 
   if (location) {
-    // Indexed filters (is_active, type) run first; JSON_CONTAINS narrows result set
-    and.push(literal(`JSON_CONTAINS(locations, ${JSON.stringify(JSON.stringify(location))})`));
+    // Use model alias `Car` (Sequelize FROM `cars` AS `Car`). JSON_SEARCH works on MariaDB/MySQL.
+    and.push(
+      literal(
+        `JSON_SEARCH(\`Car\`.\`locations\`, 'one', ${sequelize.escape(location)}) IS NOT NULL`,
+      ),
+    );
   }
 
-  if (date) {
-    const end = returnDate && returnDate >= date ? returnDate : date;
-    // Subquery uses idx on (status, car_id, pickup_date) — avoids loading busy rows into Node
-    and.push(
-      literal(`NOT EXISTS (
-        SELECT 1 FROM bookings b
-        WHERE b.car_id = cars.id
-          AND b.status IN ('pending','confirmed','active')
-          AND b.pickup_date <= ${sequelize.escape(end)}
-          AND b.return_date >= ${sequelize.escape(date)}
-      )`),
-    );
+  if (date && ISO_DATE.test(date)) {
+    const end = returnDate && ISO_DATE.test(returnDate) && returnDate >= date ? returnDate : date;
+    // ORM lookup avoids raw SQL alias bugs (`cars.id` vs `Car.id`) that 500 on Hostinger/MySQL
+    const busyRows = await Booking.findAll({
+      attributes: ['carId'],
+      where: {
+        status: { [Op.in]: BUSY_STATUSES },
+        pickupDate: { [Op.lte]: end },
+        returnDate: { [Op.gte]: date },
+      },
+      raw: true,
+    });
+    const busyIds = [...new Set(busyRows.map((row) => row.carId).filter(Boolean))];
+    if (busyIds.length) {
+      where.id = { [Op.notIn]: busyIds };
+    }
   }
 
   if (and.length) {
