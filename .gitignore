@@ -1,8 +1,12 @@
 node_modules
 .env
 .env.production
-uploads/*
-uploads
-!uploads/.gitkeep
 *.log
 .DS_Store
+
+# Keep fleet photos in git so Hostinger deploys include them
+# (runtime downloads are wiped on every new hbuilds version)
+uploads/*
+!uploads/.gitkeep
+!uploads/fleet/
+!uploads/fleet/**

@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express from 'express';
@@ -12,6 +14,7 @@ import userRoutes from './routes/userRoutes.js';
 import { getUploadsRoot } from './utils/paths.js';
 
 const uploadsPath = getUploadsRoot();
+fs.mkdirSync(uploadsPath, { recursive: true });
 
 const app = express();
 
@@ -26,16 +29,32 @@ app.use(
 app.use(express.json({ limit: '2mb' }));
 app.use(cookieParser());
 
-// Serve fleet photos at both paths (Hostinger often only proxies /api/* to Node)
-const staticOpts = { fallthrough: true, maxAge: '7d', index: false };
+// Serve fleet photos (Hostinger often only proxies /api/* → Node)
+const staticOpts = {
+  fallthrough: false,
+  maxAge: '7d',
+  index: false,
+  dotfiles: 'ignore',
+};
 app.use('/uploads', express.static(uploadsPath, staticOpts));
 app.use('/api/uploads', express.static(uploadsPath, staticOpts));
 
 app.get('/api/health', (_req, res) => {
+  const sample = path.join(uploadsPath, 'fleet');
+  let fleetFiles = 0;
+  try {
+    if (fs.existsSync(sample)) {
+      fleetFiles = fs.readdirSync(sample, { withFileTypes: true }).filter((d) => d.isDirectory())
+        .length;
+    }
+  } catch {
+    // ignore
+  }
   res.json({
     ok: true,
     service: 'car-rental-api',
     uploadsPath,
+    fleetFolders: fleetFiles,
   });
 });
 
