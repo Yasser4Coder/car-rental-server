@@ -1,5 +1,6 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/database.js';
+import { jsonArrayAttr } from '../utils/jsonField.js';
 
 class Booking extends Model {}
 
@@ -75,9 +76,7 @@ Booking.init(
       field: 'admin_notes',
     },
     statusHistory: {
-      type: DataTypes.JSON,
-      allowNull: false,
-      defaultValue: [],
+      ...jsonArrayAttr(DataTypes, 'statusHistory', []),
       field: 'status_history',
     },
     cancelledAt: {

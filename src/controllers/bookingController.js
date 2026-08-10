@@ -1,6 +1,9 @@
 import { Op } from 'sequelize';
-import { Booking, Car, User } from '../models/index.js';
+import { isStripeConfigured } from '../config/stripe.js';
+import { Booking, Car, Payment, User } from '../models/index.js';
+import { checkCarAvailability } from '../services/carAvailability.js';
 import { appendStatusHistory, assertStatusTransition } from '../services/bookingStatus.js';
+import { createCheckoutSessionForBooking } from '../services/stripeCheckout.js';
 import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { withCarMedia } from '../utils/media.js';
@@ -32,7 +35,17 @@ export const createBooking = asyncHandler(async (req, res) => {
     },
   });
   if (overlap) {
-    throw new AppError('Car is not available for the selected dates', 409);
+    const availability = await checkCarAvailability(car.id, payload.pickupDate, payload.returnDate);
+    throw new AppError(
+      'This car is already booked for those dates. Please choose different dates or another vehicle.',
+      409,
+      {
+        code: 'DATES_UNAVAILABLE',
+        conflicts: availability.conflicts,
+        pickupDate: payload.pickupDate,
+        returnDate: payload.returnDate,
+      },
+    );
   }
 
   const days = rentalDays(payload.pickupDate, payload.returnDate);
@@ -55,6 +68,7 @@ export const createBooking = asyncHandler(async (req, res) => {
     deposit: car.deposit,
     total,
     status: 'pending',
+    paymentStatus: 'unpaid',
     statusHistory: [
       {
         from: null,
@@ -70,7 +84,23 @@ export const createBooking = asyncHandler(async (req, res) => {
     include: [{ model: Car, as: 'car' }],
   });
 
-  res.status(201).json({ data: withBookingMedia(full) });
+  const response = { data: withBookingMedia(full) };
+
+  if (payload.payNow && isStripeConfigured()) {
+    try {
+      const checkout = await createCheckoutSessionForBooking(
+        { bookingId: booking.id, email: booking.email },
+        req.user || null,
+      );
+      response.checkoutUrl = checkout.url;
+      response.sessionId = checkout.sessionId;
+    } catch (err) {
+      console.warn('[createBooking] payNow checkout failed:', err.message);
+      response.checkoutError = err.message || 'Could not start payment';
+    }
+  }
+
+  res.status(201).json(response);
 });
 
 export const getMyBookings = asyncHandler(async (req, res) => {
@@ -198,6 +228,13 @@ export const adminGetBooking = asyncHandler(async (req, res) => {
     include: [
       { model: Car, as: 'car' },
       { model: User, as: 'user', attributes: ['id', 'fullName', 'email', 'phone', 'role'] },
+      {
+        model: Payment,
+        as: 'payments',
+        required: false,
+        separate: true,
+        order: [['createdAt', 'DESC']],
+      },
     ],
   });
   if (!booking) throw new AppError('Booking not found', 404);
@@ -228,6 +265,46 @@ export const adminUpdateStatus = asyncHandler(async (req, res) => {
 
   await booking.save();
   res.json({ data: booking });
+});
+
+export const adminUpdatePaymentStatus = asyncHandler(async (req, res) => {
+  const booking = await Booking.findByPk(req.params.id, {
+    include: [
+      { model: Car, as: 'car' },
+      {
+        model: Payment,
+        as: 'payments',
+        required: false,
+        separate: true,
+        order: [['createdAt', 'DESC']],
+      },
+    ],
+  });
+  if (!booking) throw new AppError('Booking not found', 404);
+
+  const { paymentStatus, note } = req.body;
+  const previous = booking.paymentStatus || 'unpaid';
+  if (previous === paymentStatus) {
+    throw new AppError('Booking already has this payment status', 400);
+  }
+
+  const historyNote = [
+    `Payment: ${previous} → ${paymentStatus}`,
+    note?.trim() || null,
+  ]
+    .filter(Boolean)
+    .join(' — ');
+
+  booking.statusHistory = appendStatusHistory(booking, {
+    from: previous,
+    to: paymentStatus,
+    by: `admin:${req.user.id}`,
+    note: historyNote,
+  });
+  booking.paymentStatus = paymentStatus;
+  await booking.save();
+
+  res.json({ data: withBookingMedia(booking) });
 });
 
 export const adminUpdateBooking = asyncHandler(async (req, res) => {

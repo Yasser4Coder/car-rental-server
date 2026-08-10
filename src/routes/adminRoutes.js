@@ -2,6 +2,7 @@ import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
 import * as bookingController from '../controllers/bookingController.js';
 import * as carController from '../controllers/carController.js';
+import * as paymentsAdminController from '../controllers/paymentsAdminController.js';
 import * as statsController from '../controllers/statsController.js';
 import * as userAdminController from '../controllers/userAdminController.js';
 import { authenticate, requireAdmin } from '../middleware/auth.js';
@@ -9,6 +10,8 @@ import { upload } from '../middleware/upload.js';
 import { validate } from '../middleware/validate.js';
 import {
   adminBookingFilterSchema,
+  adminPaymentFilterSchema,
+  updateBookingPaymentStatusSchema,
   updateBookingSchema,
   updateBookingStatusSchema,
 } from '../validators/bookingSchemas.js';
@@ -60,7 +63,19 @@ router.patch(
   validate(updateBookingStatusSchema),
   bookingController.adminUpdateStatus,
 );
+router.patch(
+  '/bookings/:id/payment-status',
+  validate(updateBookingPaymentStatusSchema),
+  bookingController.adminUpdatePaymentStatus,
+);
 router.patch('/bookings/:id', validate(updateBookingSchema), bookingController.adminUpdateBooking);
+
+router.get(
+  '/payments',
+  validate(adminPaymentFilterSchema, 'query'),
+  paymentsAdminController.adminListPayments,
+);
+router.get('/payments/:id', paymentsAdminController.adminGetPaymentBooking);
 
 router.get('/users', validate(adminUserFilterSchema, 'query'), userAdminController.adminListUsers);
 router.post('/users', validate(adminCreateUserSchema), userAdminController.adminCreateUser);

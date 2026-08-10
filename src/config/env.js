@@ -39,4 +39,11 @@ export const env = {
     name: process.env.ADMIN_NAME || 'Fleet Admin',
   },
   uploadDir: process.env.UPLOAD_DIR || 'uploads',
+  /** Stripe Checkout + webhooks (optional until configured). Use sk_… secret key. */
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY || '',
+  stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || '',
+  bookingPaymentTimeoutMinutes: (() => {
+    const n = Number.parseInt(String(process.env.BOOKING_PAYMENT_TIMEOUT_MINUTES || '30'), 10);
+    return Number.isFinite(n) ? Math.min(1440, Math.max(1, n)) : 30;
+  })(),
 };

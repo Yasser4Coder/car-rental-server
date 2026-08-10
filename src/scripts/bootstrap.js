@@ -7,6 +7,10 @@ import { ensureSearchIndexes } from './ensureSearchIndexes.js';
 import { ensureFleetAssets, getUploadsRoot } from './ensureFleetAssets.js';
 import { fleetPath, seedDatabase } from '../seeders/seed.js';
 import { backfillCarSlugs, ensureCarSlugColumn } from '../utils/carSlug.js';
+import { ensurePaymentsTable } from '../utils/ensurePaymentsTable.js';
+import { expireStalePendingPaymentBookings } from '../services/bookingPaymentTimeout.js';
+import { env } from '../config/env.js';
+import { isStripeConfigured } from '../config/stripe.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const importScript = path.join(__dirname, '../seeders/importFleetFromPdf.py');
@@ -140,6 +144,13 @@ export async function runBootstrap() {
     throw err;
   }
 
+  try {
+    await ensurePaymentsTable();
+  } catch (err) {
+    console.error(`[bootstrap] ensurePaymentsTable failed: ${err.message}`);
+    throw err;
+  }
+
   if (force) {
     console.log('[bootstrap] FORCE_BOOTSTRAP=1 — clearing bootstrap flags');
     await AppBootstrap.destroy({ where: {} });
@@ -155,9 +166,31 @@ export async function runBootstrap() {
   } catch (err) {
     console.warn(`[bootstrap] slug backfill skipped: ${err.message}`);
   }
+
+  try {
+    const featuredCount = await Car.count({ where: { featured: true, isActive: true } });
+    if (featuredCount === 0) {
+      const pick = await Car.findAll({
+        where: { isActive: true },
+        order: [
+          ['price', 'DESC'],
+          ['id', 'ASC'],
+        ],
+        limit: 12,
+      });
+      for (const car of pick) {
+        await car.update({ featured: true });
+      }
+      if (pick.length) {
+        console.log(`[bootstrap] marked ${pick.length} cars as featured (none were set)`);
+      }
+    }
+  } catch (err) {
+    console.warn(`[bootstrap] ensure featured skipped: ${err.message}`);
+  }
 }
 
-/** Slow jobs after listen() — restore missing Drive photos. */
+/** Slow jobs after listen() — restore missing Drive photos + payment timeouts. */
 export function runBackgroundJobs() {
   ensureFleetAssets()
     .then((result) => {
@@ -168,4 +201,20 @@ export function runBackgroundJobs() {
     .catch((err) => {
       console.warn(`[bootstrap] background fleet-assets failed: ${err.message}`);
     });
+
+  const runTimeout = () => {
+    expireStalePendingPaymentBookings().catch((err) => {
+      console.warn(`[booking-timeout] job failed: ${err.message}`);
+    });
+  };
+
+  // First pass shortly after boot, then every 5 minutes
+  setTimeout(runTimeout, 15_000);
+  setInterval(runTimeout, 5 * 60 * 1000);
+
+  if (isStripeConfigured()) {
+    console.log(
+      `[bootstrap] Stripe configured — unpaid bookings auto-cancel after ${env.bookingPaymentTimeoutMinutes}m`,
+    );
+  }
 }

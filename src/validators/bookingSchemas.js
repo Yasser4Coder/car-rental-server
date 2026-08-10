@@ -11,6 +11,8 @@ export const createBookingSchema = z
     returnDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     delivery: z.enum(['self', 'delivery']).default('self'),
     notes: z.string().trim().max(2000).optional().nullable(),
+    /** When true and Stripe is configured, response may include checkoutUrl. */
+    payNow: z.boolean().optional().default(false),
   })
   .refine((data) => data.returnDate >= data.pickupDate, {
     message: 'Return date must be on or after pickup date',
@@ -33,6 +35,18 @@ export const adminBookingFilterSchema = z.object({
 export const updateBookingStatusSchema = z.object({
   status: z.enum(['pending', 'confirmed', 'active', 'completed', 'cancelled', 'rejected']),
   note: z.string().trim().max(1000).optional().nullable(),
+});
+
+export const updateBookingPaymentStatusSchema = z.object({
+  paymentStatus: z.enum(['unpaid', 'deposit_held', 'paid', 'refunded']),
+  note: z.string().trim().max(1000).optional().nullable(),
+});
+
+export const adminPaymentFilterSchema = z.object({
+  paymentStatus: z.enum(['unpaid', 'deposit_held', 'paid', 'refunded']).optional(),
+  q: z.string().optional(),
+  page: z.coerce.number().int().min(1).optional().default(1),
+  limit: z.coerce.number().int().min(1).max(100).optional().default(25),
 });
 
 export const updateBookingSchema = z.object({

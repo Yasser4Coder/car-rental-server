@@ -1,10 +1,11 @@
 import { Op } from 'sequelize';
-import { Car } from '../models/index.js';
+import { Booking, Car } from '../models/index.js';
 import {
   CAR_FEATURED_ATTRIBUTES,
   CAR_LIST_ATTRIBUTES,
   listCars,
 } from '../services/carFilter.js';
+import { checkCarAvailability } from '../services/carAvailability.js';
 import { AppError } from '../utils/AppError.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { processAndSaveCarImage, removeCarMediaFiles, safeUnlinkUpload } from '../middleware/upload.js';
@@ -42,13 +43,35 @@ export const getCars = asyncHandler(async (req, res) => {
 });
 
 export const getFeaturedCars = asyncHandler(async (req, res) => {
-  const result = await listCars({
+  const limit = Number(req.query.limit) || 12;
+  let result = await listCars({
     featured: true,
     sort: 'featured',
-    limit: Number(req.query.limit) || 12,
+    limit,
     page: 1,
     attributes: CAR_FEATURED_ATTRIBUTES,
   });
+
+  // If nothing is flagged featured yet, still show a strong homepage strip
+  if (!result.data?.length) {
+    result = await listCars({
+      sort: 'featured',
+      limit,
+      page: 1,
+      attributes: CAR_FEATURED_ATTRIBUTES,
+    });
+  }
+
+  res.json(result);
+});
+
+export const getCarAvailability = asyncHandler(async (req, res) => {
+  const pickupDate = String(req.query.pickupDate || req.query.date || '').trim();
+  const returnDate = String(req.query.returnDate || '').trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(pickupDate)) {
+    throw new AppError('pickupDate is required (YYYY-MM-DD)', 400);
+  }
+  const result = await checkCarAvailability(req.params.slugOrId, pickupDate, returnDate || pickupDate);
   res.json(result);
 });
 
