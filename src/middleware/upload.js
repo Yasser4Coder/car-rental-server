@@ -2,7 +2,6 @@ import crypto from 'crypto';
 import fs from 'fs/promises';
 import path from 'path';
 import multer from 'multer';
-import sharp from 'sharp';
 import { AppError } from '../utils/AppError.js';
 import { getUploadsRoot } from '../utils/paths.js';
 
@@ -14,10 +13,9 @@ export const ALLOWED_IMAGE_MIMES = new Set([
   'image/webp',
 ]);
 
-/** Magic-byte signatures sharp/format must match after decode. */
 const ALLOWED_FORMATS = new Set(['jpeg', 'png', 'webp']);
 
-export const MAX_UPLOAD_BYTES = 10 * 1024 * 1024; // 10MB before compress
+export const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
 export const MAX_FILES_PER_REQUEST = 8;
 export const MAX_OUTPUT_WIDTH = 1920;
 export const JPEG_QUALITY = 82;
@@ -27,9 +25,7 @@ const storage = multer.memoryStorage();
 function fileFilter(_req, file, cb) {
   const mime = String(file.mimetype || '').toLowerCase();
   if (!ALLOWED_IMAGE_MIMES.has(mime)) {
-    return cb(
-      new AppError('Only JPEG, PNG, or WebP images are allowed (no SVG/GIF)', 400),
-    );
+    return cb(new AppError('Only JPEG, PNG, or WebP images are allowed (no SVG/GIF)', 400));
   }
 
   const original = String(file.originalname || '').toLowerCase();
@@ -50,29 +46,43 @@ export const upload = multer({
   },
 });
 
+/** Lazy-load sharp so a missing native binary on Hostinger does not crash API boot. */
+async function getSharp() {
+  try {
+    const mod = await import('sharp');
+    return mod.default;
+  } catch (err) {
+    console.error('[upload] sharp failed to load:', err.message);
+    throw new AppError(
+      'Image processing is unavailable on this server. Install sharp or contact support.',
+      503,
+    );
+  }
+}
+
 /**
  * Decode, strip metadata, resize, and write a compressed JPEG under uploads/cars/{carId}/.
- * Returns public path `/uploads/cars/{carId}/{uuid}.jpg`.
  */
 export async function processAndSaveCarImage(buffer, carId) {
   if (!Buffer.isBuffer(buffer) || buffer.length === 0) {
     throw new AppError('Empty image file', 400);
   }
 
-  // Reject tiny decoys / polyglot payloads that aren't real images
   if (buffer.length < 64) {
     throw new AppError('File is too small to be a valid image', 400);
   }
 
-  let pipeline;
+  const sharp = await getSharp();
+
   let meta;
   try {
-    pipeline = sharp(buffer, {
+    meta = await sharp(buffer, {
       failOn: 'error',
       animated: false,
       limitInputPixels: 40_000_000,
-    }).rotate(); // honor EXIF orientation, then strip below
-    meta = await pipeline.metadata();
+    })
+      .rotate()
+      .metadata();
   } catch {
     throw new AppError('Invalid or corrupted image file', 400);
   }
@@ -92,7 +102,6 @@ export async function processAndSaveCarImage(buffer, carId) {
   const filename = `${crypto.randomUUID()}.jpg`;
   const absolute = path.join(carDir, filename);
 
-  // Path safety: ensure we never write outside uploads/cars/{id}
   if (!absolute.startsWith(carDir)) {
     throw new AppError('Invalid upload path', 400);
   }
@@ -124,7 +133,6 @@ export async function processAndSaveCarImage(buffer, carId) {
 }
 
 export function publicUploadPath(filename) {
-  // Legacy helper — prefer processAndSaveCarImage return value
   return `/uploads/${filename}`;
 }
 
@@ -149,18 +157,11 @@ function isPathInside(parent, child) {
   return Boolean(relative) && !relative.startsWith('..') && !path.isAbsolute(relative);
 }
 
-/**
- * Delete an uploaded image from disk.
- * Allows /uploads/cars/* and /uploads/fleet/* (not the shared pending placeholder).
- */
 export async function safeUnlinkUpload(publicPath) {
   const normalized = normalizePublicUploadPath(publicPath);
   if (!normalized) return false;
   if (PROTECTED_PATHS.has(normalized)) return false;
-  if (
-    !normalized.startsWith('/uploads/cars/') &&
-    !normalized.startsWith('/uploads/fleet/')
-  ) {
+  if (!normalized.startsWith('/uploads/cars/') && !normalized.startsWith('/uploads/fleet/')) {
     return false;
   }
 
@@ -178,7 +179,6 @@ export async function safeUnlinkUpload(publicPath) {
   }
 }
 
-/** Remove every media file for a car, then delete uploads/cars/{id} if present. */
 export async function removeCarMediaFiles(car) {
   if (!car) return { removed: 0 };
 
@@ -197,7 +197,6 @@ export async function removeCarMediaFiles(car) {
     if (await safeUnlinkUpload(p)) removed += 1;
   }
 
-  // Wipe the car-specific upload folder (admin-uploaded compressed photos)
   const id = String(car.id ?? '');
   if (/^\d+$/.test(id)) {
     const carDir = path.resolve(getUploadsRoot(), 'cars', id);

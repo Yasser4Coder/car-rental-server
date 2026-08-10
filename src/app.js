@@ -20,16 +20,57 @@ const app = express();
 
 app.set('trust proxy', 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
+
+/** Normalize origins and allow www / non-www variants of client + admin. */
+function buildAllowedOrigins() {
+  const raw = [env.clientUrl, env.adminUrl, process.env.EXTRA_CORS_ORIGINS]
+    .filter(Boolean)
+    .flatMap((value) => String(value).split(','))
+    .map((value) => value.trim().replace(/\/$/, ''))
+    .filter(Boolean);
+
+  const set = new Set(raw);
+  for (const origin of [...set]) {
+    try {
+      const url = new URL(origin);
+      if (url.hostname.startsWith('www.')) {
+        set.add(`${url.protocol}//${url.hostname.slice(4)}`);
+      } else if (url.hostname.includes('.')) {
+        set.add(`${url.protocol}//www.${url.hostname}`);
+      }
+    } catch {
+      // ignore invalid
+    }
+  }
+  return set;
+}
+
+const allowedOrigins = buildAllowedOrigins();
+console.log('[cors] allowed origins:', [...allowedOrigins].join(', ') || '(none)');
+
 app.use(
   cors({
-    origin: [env.clientUrl, env.adminUrl],
+    origin(origin, callback) {
+      // Non-browser / same-origin tools (curl, server-to-server) send no Origin
+      if (!origin) return callback(null, true);
+      const normalized = origin.replace(/\/$/, '');
+      if (allowedOrigins.has(normalized)) return callback(null, true);
+      console.warn(`[cors] blocked origin: ${origin}`);
+      return callback(null, false);
+    },
     credentials: true,
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    optionsSuccessStatus: 204,
   }),
 );
+
+// Ensure preflight always completes quickly through Express (not Hostinger HTML 503)
+app.options(/.*/, cors());
+
 app.use(express.json({ limit: '2mb' }));
 app.use(cookieParser());
 
-// Serve fleet photos (Hostinger often only proxies /api/* → Node)
 const staticOpts = {
   fallthrough: false,
   maxAge: '7d',
@@ -55,6 +96,7 @@ app.get('/api/health', (_req, res) => {
     service: 'car-rental-api',
     uploadsPath,
     fleetFolders: fleetFiles,
+    corsOrigins: [...allowedOrigins],
   });
 });
 
@@ -63,9 +105,6 @@ app.use('/api/users', userRoutes);
 app.use('/api/cars', carRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/admin', adminRoutes);
-
-// Stripe webhook stub for later:
-// app.post('/api/payments/webhook', express.raw({ type: 'application/json' }), ...)
 
 app.use(notFoundHandler);
 app.use(errorHandler);
