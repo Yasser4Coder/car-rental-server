@@ -3,6 +3,7 @@ import rateLimit from 'express-rate-limit';
 import * as bookingController from '../controllers/bookingController.js';
 import * as carController from '../controllers/carController.js';
 import * as statsController from '../controllers/statsController.js';
+import * as userAdminController from '../controllers/userAdminController.js';
 import { authenticate, requireAdmin } from '../middleware/auth.js';
 import { upload } from '../middleware/upload.js';
 import { validate } from '../middleware/validate.js';
@@ -12,6 +13,11 @@ import {
   updateBookingStatusSchema,
 } from '../validators/bookingSchemas.js';
 import { carBodySchema, carFilterSchema, carUpdateSchema } from '../validators/carSchemas.js';
+import {
+  adminCreateUserSchema,
+  adminUpdateUserSchema,
+  adminUserFilterSchema,
+} from '../validators/userAdminSchemas.js';
 
 const router = Router();
 
@@ -55,5 +61,11 @@ router.patch(
   bookingController.adminUpdateStatus,
 );
 router.patch('/bookings/:id', validate(updateBookingSchema), bookingController.adminUpdateBooking);
+
+router.get('/users', validate(adminUserFilterSchema, 'query'), userAdminController.adminListUsers);
+router.post('/users', validate(adminCreateUserSchema), userAdminController.adminCreateUser);
+router.get('/users/:id', userAdminController.adminGetUser);
+router.patch('/users/:id', validate(adminUpdateUserSchema), userAdminController.adminUpdateUser);
+router.delete('/users/:id', userAdminController.adminDeleteUser);
 
 export default router;
