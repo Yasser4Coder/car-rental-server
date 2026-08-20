@@ -5,6 +5,9 @@ import Booking from './Booking.js';
 import Payment from './Payment.js';
 import RefreshToken from './RefreshToken.js';
 import AppBootstrap from './AppBootstrap.js';
+import WhyChooseUsItem from './WhyChooseUsItem.js';
+import VehicleCategory from './VehicleCategory.js';
+import SeoContent from './SeoContent.js';
 
 User.hasMany(Booking, { foreignKey: 'userId', as: 'bookings' });
 Booking.belongsTo(User, { foreignKey: 'userId', as: 'user' });
@@ -18,4 +21,15 @@ Payment.belongsTo(Booking, { foreignKey: 'bookingId', as: 'booking' });
 User.hasMany(RefreshToken, { foreignKey: 'userId', as: 'refreshTokens' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
-export { sequelize, User, Car, Booking, Payment, RefreshToken, AppBootstrap };
+export {
+  sequelize,
+  User,
+  Car,
+  Booking,
+  Payment,
+  RefreshToken,
+  AppBootstrap,
+  WhyChooseUsItem,
+  VehicleCategory,
+  SeoContent,
+};

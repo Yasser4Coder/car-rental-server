@@ -1,5 +1,6 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/database.js';
+import { POPULAR_BADGE_VALUES } from '../config/popularBadges.js';
 import { jsonArrayAttr } from '../utils/jsonField.js';
 
 class Car extends Model {}
@@ -33,6 +34,23 @@ Car.init(
       field: 'daily_km',
     },
     featured: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
+    showInPopular: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+      field: 'show_in_popular',
+    },
+    popularBadge: {
+      type: DataTypes.ENUM(...POPULAR_BADGE_VALUES),
+      allowNull: true,
+      field: 'popular_badge',
+    },
+    popularSort: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+      field: 'popular_sort',
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

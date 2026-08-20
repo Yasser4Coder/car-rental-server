@@ -5,6 +5,8 @@ import * as carController from '../controllers/carController.js';
 import * as paymentsAdminController from '../controllers/paymentsAdminController.js';
 import * as statsController from '../controllers/statsController.js';
 import * as userAdminController from '../controllers/userAdminController.js';
+import * as whyChooseUsController from '../controllers/whyChooseUsController.js';
+import * as vehicleCategoryController from '../controllers/vehicleCategoryController.js';
 import { authenticate, requireAdmin } from '../middleware/auth.js';
 import { upload } from '../middleware/upload.js';
 import { validate } from '../middleware/validate.js';
@@ -21,6 +23,16 @@ import {
   adminUpdateUserSchema,
   adminUserFilterSchema,
 } from '../validators/userAdminSchemas.js';
+import {
+  whyChooseUsBodySchema,
+  whyChooseUsUpdateSchema,
+} from '../validators/whyChooseUsSchemas.js';
+import {
+  vehicleCategoryBodySchema,
+  vehicleCategoryUpdateSchema,
+} from '../validators/vehicleCategorySchemas.js';
+import { seoContentUpdateSchema } from '../validators/seoContentSchemas.js';
+import * as seoContentController from '../controllers/seoContentController.js';
 
 const router = Router();
 
@@ -82,5 +94,41 @@ router.post('/users', validate(adminCreateUserSchema), userAdminController.admin
 router.get('/users/:id', userAdminController.adminGetUser);
 router.patch('/users/:id', validate(adminUpdateUserSchema), userAdminController.adminUpdateUser);
 router.delete('/users/:id', userAdminController.adminDeleteUser);
+
+router.get('/content/why-choose-us', whyChooseUsController.adminListWhyChooseUs);
+router.post(
+  '/content/why-choose-us',
+  validate(whyChooseUsBodySchema),
+  whyChooseUsController.adminCreateWhyChooseUs,
+);
+router.patch(
+  '/content/why-choose-us/:id',
+  validate(whyChooseUsUpdateSchema),
+  whyChooseUsController.adminUpdateWhyChooseUs,
+);
+router.delete('/content/why-choose-us/:id', whyChooseUsController.adminDeleteWhyChooseUs);
+
+router.get('/content/vehicle-categories', vehicleCategoryController.adminListVehicleCategories);
+router.post(
+  '/content/vehicle-categories',
+  validate(vehicleCategoryBodySchema),
+  vehicleCategoryController.adminCreateVehicleCategory,
+);
+router.patch(
+  '/content/vehicle-categories/:id',
+  validate(vehicleCategoryUpdateSchema),
+  vehicleCategoryController.adminUpdateVehicleCategory,
+);
+router.delete(
+  '/content/vehicle-categories/:id',
+  vehicleCategoryController.adminDeleteVehicleCategory,
+);
+
+router.get('/content/seo/homepage', seoContentController.adminGetHomepageSeo);
+router.patch(
+  '/content/seo/homepage',
+  validate(seoContentUpdateSchema),
+  seoContentController.adminUpdateHomepageSeo,
+);
 
 export default router;

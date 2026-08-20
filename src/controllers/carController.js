@@ -1,5 +1,6 @@
 import { Op } from 'sequelize';
 import { Booking, Car } from '../models/index.js';
+import { getPopularCars } from '../services/popularCars.js';
 import {
   CAR_FEATURED_ATTRIBUTES,
   CAR_LIST_ATTRIBUTES,
@@ -62,6 +63,12 @@ export const getFeaturedCars = asyncHandler(async (req, res) => {
     });
   }
 
+  res.json(result);
+});
+
+export const getPopularCarsHandler = asyncHandler(async (req, res) => {
+  const limit = Number(req.query.limit) || 6;
+  const result = await getPopularCars(limit);
   res.json(result);
 });
 

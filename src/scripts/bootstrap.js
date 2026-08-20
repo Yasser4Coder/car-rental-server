@@ -8,6 +8,10 @@ import { ensureFleetAssets, getUploadsRoot } from './ensureFleetAssets.js';
 import { fleetPath, seedDatabase } from '../seeders/seed.js';
 import { backfillCarSlugs, ensureCarSlugColumn } from '../utils/carSlug.js';
 import { ensurePaymentsTable } from '../utils/ensurePaymentsTable.js';
+import { ensurePopularCarColumns } from '../utils/ensurePopularCarColumns.js';
+import { ensureWhyChooseUsTable } from '../utils/ensureWhyChooseUsTable.js';
+import { ensureVehicleCategoriesTable } from '../utils/ensureVehicleCategoriesTable.js';
+import { ensureSeoContentsTable } from '../utils/ensureSeoContentsTable.js';
 import { expireStalePendingPaymentBookings } from '../services/bookingPaymentTimeout.js';
 import { env } from '../config/env.js';
 import { isStripeConfigured } from '../config/stripe.js';
@@ -133,6 +137,35 @@ async function bootstrapSeed() {
 export async function runBootstrap() {
   const force = process.env.FORCE_BOOTSTRAP === '1' || process.env.FORCE_BOOTSTRAP === 'true';
 
+  // Alter existing tables before sync() tries to add indexes on new columns
+  try {
+    await ensurePopularCarColumns();
+  } catch (err) {
+    console.error(`[bootstrap] ensurePopularCarColumns failed: ${err.message}`);
+    throw err;
+  }
+
+  try {
+    await ensureWhyChooseUsTable();
+  } catch (err) {
+    console.error(`[bootstrap] ensureWhyChooseUsTable failed: ${err.message}`);
+    throw err;
+  }
+
+  try {
+    await ensureVehicleCategoriesTable();
+  } catch (err) {
+    console.error(`[bootstrap] ensureVehicleCategoriesTable failed: ${err.message}`);
+    throw err;
+  }
+
+  try {
+    await ensureSeoContentsTable();
+  } catch (err) {
+    console.error(`[bootstrap] ensureSeoContentsTable failed: ${err.message}`);
+    throw err;
+  }
+
   await sequelize.sync();
   console.log(`[bootstrap] uploads dir: ${getUploadsRoot()}`);
 
@@ -187,6 +220,34 @@ export async function runBootstrap() {
     }
   } catch (err) {
     console.warn(`[bootstrap] ensure featured skipped: ${err.message}`);
+  }
+
+  try {
+    const popularCount = await Car.count({ where: { showInPopular: true, isActive: true } });
+    if (popularCount === 0) {
+      const badges = ['most_booked', 'best_seller', 'new_arrival', 'limited_availability', 'most_booked', 'best_seller'];
+      const pick = await Car.findAll({
+        where: { isActive: true },
+        order: [
+          ['featured', 'DESC'],
+          ['price', 'DESC'],
+          ['id', 'ASC'],
+        ],
+        limit: 6,
+      });
+      for (let i = 0; i < pick.length; i += 1) {
+        await pick[i].update({
+          showInPopular: true,
+          popularBadge: badges[i] || 'most_booked',
+          popularSort: (i + 1) * 10,
+        });
+      }
+      if (pick.length) {
+        console.log(`[bootstrap] marked ${pick.length} cars for Most Popular strip`);
+      }
+    }
+  } catch (err) {
+    console.warn(`[bootstrap] ensure popular skipped: ${err.message}`);
   }
 }
 

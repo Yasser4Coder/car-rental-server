@@ -50,6 +50,12 @@ export const carBodySchema = z.object({
   deposit: z.coerce.number().int().min(0),
   dailyKm: z.coerce.number().int().min(0).default(250),
   featured: z.boolean().optional().default(false),
+  showInPopular: z.boolean().optional().default(false),
+  popularBadge: z
+    .enum(['best_seller', 'most_booked', 'new_arrival', 'limited_availability'])
+    .nullable()
+    .optional(),
+  popularSort: z.coerce.number().int().min(0).max(9999).optional().default(0),
   isActive: z.boolean().optional().default(true),
   image: z.string().min(1),
   gallery: z.array(z.string()).optional().default([]),
